@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:WidgetGroup" id="14" x="16" y="32" measuredWidth="800" measuredHeight="480">
+    <widgets xsi:type="model:Browser" id="1" width="800" height="480" text="Browser&#xA;http://kalderales.com" measuredWidth="800" measuredHeight="480">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Panel" id="2" y="52" width="800" height="61" measuredWidth="800" measuredHeight="61"/>
+    <widgets xsi:type="model:Button" id="4" x="688" y="69" width="88" height="27" text="Контакти" measuredWidth="88" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="11" x="592" y="69" width="80" height="27" text="За Нас" measuredWidth="80" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="12" x="112" y="69" width="136" height="27" text="Категории продукти" measuredWidth="136" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="13" x="256" y="69" width="96" height="27" text="Галерия" measuredWidth="96" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="18" x="10" y="71" width="87" text="Езици" measuredWidth="87" measuredHeight="28">
+      <font size="15px"/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Note" id="19" x="280" y="272" text="Да се имплементира страницата &quot;За Нас&quot;" measuredWidth="247" measuredHeight="29">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="6" y="32" width="800" height="521" text="Browser&#xA;http://kalderales.com" measuredWidth="800" measuredHeight="521">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="2" x="6" y="84" width="800" height="61" measuredWidth="800" measuredHeight="61"/>
+  <widgets xsi:type="model:Button" id="3" x="704" y="101" width="88" height="27" text="Контакти" measuredWidth="88" measuredHeight="27">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="4" x="608" y="101" width="80" height="27" text="За Нас" measuredWidth="80" measuredHeight="27">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="7" x="45" y="328" width="684" measuredWidth="684" measuredHeight="6"/>
+  <widgets xsi:type="model:HLine" id="8" x="45" y="528" width="684" measuredWidth="684" measuredHeight="6"/>
+  <widgets xsi:type="model:Label" id="10" x="36" y="160" width="164" text="Мека дървесина" measuredWidth="164" measuredHeight="36">
+    <font size="20px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="11" x="36" y="344" width="180" text="Твърда дървесина" measuredWidth="180" measuredHeight="36">
+    <font size="20px"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="34" x="64" y="202" measuredWidth="90" measuredHeight="117">
+    <widgets xsi:type="model:Panel" id="16" width="90" height="117" measuredWidth="90" measuredHeight="117"/>
+    <widgets xsi:type="model:Button" id="18" y="92" width="90" text="Разгледай" measuredWidth="90" measuredHeight="25">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="20" y="70" width="90" text="Акация" measuredWidth="90" measuredHeight="23" textAlignment="Center">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Icon" id="21" width="90" height="71" measuredWidth="90" measuredHeight="71" icon="image (large)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="35" x="64" y="400" measuredWidth="90" measuredHeight="117">
+    <widgets xsi:type="model:Panel" id="36" width="90" height="117" measuredWidth="90" measuredHeight="117"/>
+    <widgets xsi:type="model:Button" id="37" y="92" width="90" text="Разгледай" measuredWidth="90" measuredHeight="25">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="38" y="70" width="90" text="Акация" measuredWidth="90" measuredHeight="23" textAlignment="Center">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Icon" id="39" width="90" height="71" measuredWidth="90" measuredHeight="71" icon="image (large)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="50" x="456" y="400" measuredWidth="90" measuredHeight="117">
+    <widgets xsi:type="model:Panel" id="51" width="90" height="117" measuredWidth="90" measuredHeight="117"/>
+    <widgets xsi:type="model:Button" id="52" y="92" width="90" text="Разгледай" measuredWidth="90" measuredHeight="25">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="53" y="70" width="90" text="Акация" measuredWidth="90" measuredHeight="23" textAlignment="Center">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Icon" id="54" width="90" height="71" measuredWidth="90" measuredHeight="71" icon="image (large)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="55" x="328" y="400" measuredWidth="90" measuredHeight="117">
+    <widgets xsi:type="model:Panel" id="56" width="90" height="117" measuredWidth="90" measuredHeight="117"/>
+    <widgets xsi:type="model:Button" id="57" y="92" width="90" text="Разгледай" measuredWidth="90" measuredHeight="25">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="58" y="70" width="90" text="Акация" measuredWidth="90" measuredHeight="23" textAlignment="Center">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Icon" id="59" width="90" height="71" measuredWidth="90" measuredHeight="71" icon="image (large)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="60" x="193" y="400" measuredWidth="90" measuredHeight="117">
+    <widgets xsi:type="model:Panel" id="61" width="90" height="117" measuredWidth="90" measuredHeight="117"/>
+    <widgets xsi:type="model:Button" id="62" y="92" width="90" text="Разгледай" measuredWidth="90" measuredHeight="25">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="63" y="70" width="90" text="Акация" measuredWidth="90" measuredHeight="23" textAlignment="Center">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Icon" id="64" width="90" height="71" measuredWidth="90" measuredHeight="71" icon="image (large)"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="68" x="120" y="101" width="136" height="27" text="Категории продукти" measuredWidth="136" measuredHeight="27">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="69" x="264" y="101" width="96" height="27" text="Галерия" measuredWidth="96" measuredHeight="27">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="70" x="18" y="103" width="87" text="Езици" measuredWidth="87" measuredHeight="28">
+    <font size="15px"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

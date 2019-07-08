@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:WidgetGroup" id="1" x="-16" y="28" measuredWidth="800" measuredHeight="480">
+    <widgets xsi:type="model:Browser" id="2" width="800" height="480" text="Browser&#xA;http://kalderales.com" measuredWidth="800" measuredHeight="480">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Panel" id="3" y="52" width="800" height="61" measuredWidth="800" measuredHeight="61"/>
+    <widgets xsi:type="model:Button" id="4" x="688" y="69" width="88" height="27" text="Контакти" measuredWidth="88" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="5" x="592" y="69" width="80" height="27" text="За Нас" measuredWidth="80" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="6" x="112" y="69" width="136" height="27" text="Категории продукти" measuredWidth="136" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="7" x="256" y="69" width="96" height="27" text="Галерия" measuredWidth="96" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="8" x="10" y="71" width="87" text="Езици" measuredWidth="87" measuredHeight="28">
+      <font size="15px"/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Label" id="9" x="506" y="194" text="Кол" measuredWidth="43" measuredHeight="36">
+    <font size="20px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="25" x="416" y="240" measuredWidth="248" measuredHeight="207">
+    <widgets xsi:type="model:TextField" id="15" width="248" text="These are all product parameters" measuredWidth="248" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="16" y="22" width="248" text="Text field" measuredWidth="248" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="17" y="40" width="248" text="Text field" measuredWidth="248" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="18" y="62" width="248" text="Text field" measuredWidth="248" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="19" y="78" width="248" text="Text field" measuredWidth="248" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="20" y="100" width="248" text="Text field" measuredWidth="248" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="21" y="122" width="248" text="Text field" measuredWidth="248" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="22" y="140" width="248" text="Text field" measuredWidth="248" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="23" y="162" width="248" text="Text field" measuredWidth="248" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="24" y="184" width="248" text="Text field" measuredWidth="248" measuredHeight="23">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="33" x="72" y="152" measuredWidth="232" measuredHeight="342">
+    <widgets xsi:type="model:Icon" id="10" x="16" width="216" height="216" measuredWidth="216" measuredHeight="216" icon="image (large)"/>
+    <widgets xsi:type="model:Button" id="26" x="82" y="312" text="Поръчай" measuredWidth="84" measuredHeight="30">
+      <font size="15px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="28" x="3" y="259" text="Диаметър" measuredWidth="66" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="29" y="237" text="Обем" measuredWidth="42" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="30" y="280" text="Параметри (ширина и дължина)" measuredWidth="191" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="31" y="215" text="Клас" measuredWidth="53" measuredHeight="23">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Note" id="32" x="816" y="225" width="177" height="86" text="Some of the proucts will be bought by circumfrene and others will be bouht by length and with" measuredWidth="177" measuredHeight="86">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

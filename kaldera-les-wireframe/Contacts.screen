@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:WidgetGroup" id="1" x="16" y="32" height="553" measuredWidth="800" measuredHeight="553">
+    <widgets xsi:type="model:Browser" id="2" width="800" height="553" text="Browser&#xA;http://kalderales.com" measuredWidth="800" measuredHeight="553">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Panel" id="3" y="59" width="800" height="70" measuredWidth="800" measuredHeight="70"/>
+    <widgets xsi:type="model:Button" id="4" x="688" y="79" width="88" height="30" text="Контакти" measuredWidth="88" measuredHeight="30">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="5" x="592" y="79" width="80" height="30" text="За Нас" measuredWidth="80" measuredHeight="30">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="40" x="120" y="80" width="136" height="27" text="Категории продукти" measuredWidth="136" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="41" x="264" y="80" width="96" height="27" text="Галерия" measuredWidth="96" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="42" x="18" y="82" width="87" text="Езици" measuredWidth="87" measuredHeight="28">
+      <font size="15px"/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Label" id="8" x="360" y="168" text="Контакти" measuredWidth="117" measuredHeight="43">
+    <font size="25px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="9" x="159" y="210" width="514" measuredWidth="514" measuredHeight="6"/>
+  <widgets xsi:type="model:Label" id="10" x="352" y="248" width="89" text="Локация:" measuredWidth="89" measuredHeight="29">
+    <font size="16px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Map" id="11" x="352" y="288" width="369" height="132" measuredWidth="369" measuredHeight="132"/>
+  <widgets xsi:type="model:Label" id="12" x="56" y="385" text="Работно време:" measuredWidth="129" measuredHeight="29">
+    <font size="16px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="13" x="55" y="274" text="Телефон:" measuredWidth="79" measuredHeight="29">
+    <font size="16px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="14" x="56" y="313" text="Имейл:" measuredWidth="64" measuredHeight="29">
+    <font size="16px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="15" x="56" y="349" width="77" text="Адрес:" measuredWidth="77" measuredHeight="29">
+    <font size="16px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="16" x="320" y="432" text="Представители" measuredWidth="134" measuredHeight="31">
+    <font size="17px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="17" x="119" y="474" width="514" measuredWidth="514" measuredHeight="6"/>
+  <widgets xsi:type="model:Icon" id="30" x="88" y="494" width="99" height="91" measuredWidth="99" measuredHeight="91" icon="image (large)"/>
+  <widgets xsi:type="model:Icon" id="31" x="198" y="494" width="99" height="91" measuredWidth="99" measuredHeight="91" icon="image (large)"/>
+  <widgets xsi:type="model:Icon" id="32" x="310" y="494" width="99" height="91" measuredWidth="99" measuredHeight="91" icon="image (large)"/>
+  <widgets xsi:type="model:Icon" id="33" x="422" y="494" width="99" height="91" measuredWidth="99" measuredHeight="91" icon="image (large)"/>
+  <widgets xsi:type="model:Icon" id="34" x="534" y="494" width="99" height="91" measuredWidth="99" measuredHeight="91" icon="image (large)"/>
+  <widgets xsi:type="model:Label" id="35" x="144" y="277" width="113" text="данни данни" measuredWidth="113" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="37" x="127" y="316" width="113" text="данни данни" measuredWidth="113" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="38" x="119" y="352" width="113" text="данни данни" measuredWidth="113" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="39" x="194" y="388" width="113" text="данни данни" measuredWidth="113" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

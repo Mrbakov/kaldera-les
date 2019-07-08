@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:WidgetGroup" id="1" x="6" y="24" measuredWidth="801" measuredHeight="889">
+    <widgets xsi:type="model:Browser" id="2" width="800" height="889" text="Browser&#xA;http://kalderales.com" measuredWidth="800" measuredHeight="889">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Panel" id="3" y="52" width="800" height="61" measuredWidth="800" measuredHeight="61"/>
+    <widgets xsi:type="model:Button" id="4" x="690" y="69" width="88" height="27" text="Контакти" measuredWidth="88" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="5" x="594" y="69" width="80" height="27" text="За Нас" measuredWidth="80" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:WidgetGroup" id="17" x="59" y="144" measuredWidth="191" measuredHeight="281">
+      <widgets xsi:type="model:Panel" id="9" width="191" height="281" measuredWidth="191" measuredHeight="281"/>
+      <widgets xsi:type="model:Icon" id="10" x="8" width="183" height="145" measuredWidth="183" measuredHeight="145" icon="image (large)"/>
+      <widgets xsi:type="model:Label" id="11" x="8" y="166" text="Основана:" measuredWidth="79" measuredHeight="29">
+        <font size="16px"/>
+      </widgets>
+      <widgets xsi:type="model:Label" id="12" x="8" y="195" text="Основатели:" measuredWidth="94" measuredHeight="29">
+        <font size="16px"/>
+      </widgets>
+      <widgets xsi:type="model:Label" id="13" x="8" y="129" text="Kaldera Les" measuredWidth="114" measuredHeight="36">
+        <font size="20px" bold="true"/>
+      </widgets>
+    </widgets>
+    <widgets xsi:type="model:Text" id="14" x="330" y="144" width="400" height="120" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." measuredWidth="400" measuredHeight="120">
+      <font size="13px"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="18" x="338" y="488" text="Екип" measuredWidth="64" measuredHeight="43">
+      <font size="25px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:HLine" id="19" x="130" y="536" width="514" measuredWidth="514" measuredHeight="6"/>
+    <widgets xsi:type="model:WidgetGroup" id="20" x="58" y="552" measuredWidth="193" measuredHeight="313">
+      <widgets xsi:type="model:Panel" id="21" width="193" height="313" measuredWidth="193" measuredHeight="313"/>
+      <widgets xsi:type="model:Icon" id="22" x="4" width="189" height="145" measuredWidth="189" measuredHeight="145" icon="image (large)"/>
+      <widgets xsi:type="model:Label" id="23" x="44" y="176" width="106" text="съосновател" measuredWidth="106" measuredHeight="29">
+        <font size="16px"/>
+      </widgets>
+      <widgets xsi:type="model:Label" id="25" x="20" y="139" width="153" text="Тодор Тодоров" measuredWidth="153" measuredHeight="36">
+        <font size="20px" bold="true"/>
+      </widgets>
+      <widgets xsi:type="model:Text" id="26" x="4" y="218" width="179" height="85" text="Lornostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo pidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." measuredWidth="179" measuredHeight="85">
+        <font/>
+      </widgets>
+    </widgets>
+    <widgets xsi:type="model:WidgetGroup" id="27" x="298" y="552" measuredWidth="193" measuredHeight="313">
+      <widgets xsi:type="model:Panel" id="28" width="193" height="313" measuredWidth="193" measuredHeight="313"/>
+      <widgets xsi:type="model:Icon" id="29" x="4" width="189" height="145" measuredWidth="189" measuredHeight="145" icon="image (large)"/>
+      <widgets xsi:type="model:Label" id="30" x="44" y="176" width="106" text="съосновател" measuredWidth="106" measuredHeight="29">
+        <font size="16px"/>
+      </widgets>
+      <widgets xsi:type="model:Label" id="31" x="20" y="139" width="153" text="Тодор Тодоров" measuredWidth="153" measuredHeight="36">
+        <font size="20px" bold="true"/>
+      </widgets>
+      <widgets xsi:type="model:Text" id="32" x="4" y="218" width="179" height="85" text="Lornostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo pidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." measuredWidth="179" measuredHeight="85">
+        <font/>
+      </widgets>
+    </widgets>
+    <widgets xsi:type="model:WidgetGroup" id="33" x="554" y="552" measuredWidth="193" measuredHeight="313">
+      <widgets xsi:type="model:Panel" id="34" width="193" height="313" measuredWidth="193" measuredHeight="313"/>
+      <widgets xsi:type="model:Icon" id="35" x="4" width="189" height="145" measuredWidth="189" measuredHeight="145" icon="image (large)"/>
+      <widgets xsi:type="model:Label" id="36" x="44" y="176" width="106" text="съосновател" measuredWidth="106" measuredHeight="29">
+        <font size="16px"/>
+      </widgets>
+      <widgets xsi:type="model:Label" id="37" x="20" y="139" width="153" text="Тодор Тодоров" measuredWidth="153" measuredHeight="36">
+        <font size="20px" bold="true"/>
+      </widgets>
+      <widgets xsi:type="model:Text" id="38" x="4" y="218" width="179" height="85" text="Lornostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo pidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." measuredWidth="179" measuredHeight="85">
+        <font/>
+      </widgets>
+    </widgets>
+    <widgets xsi:type="model:VScrollbar" id="39" x="784" y="112" height="776" measuredWidth="17" measuredHeight="776"/>
+    <widgets xsi:type="model:Button" id="40" x="112" y="69" width="136" height="27" text="Категории продукти" measuredWidth="136" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="41" x="256" y="69" width="96" height="27" text="Галерия" measuredWidth="96" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="42" x="10" y="71" width="87" text="Езици" measuredWidth="87" measuredHeight="28">
+      <font size="15px"/>
+    </widgets>
+    <widgets xsi:type="model:Text" id="43" x="338" y="304" width="353" height="137" text="Защо да изберете *Kaldera Les:*&#xA;* A bullet&#xA;* List" measuredWidth="353" measuredHeight="137">
+      <font size="18px"/>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
