@@ -14,4 +14,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+html {
+  height: 100vh;
+  background-image: url(./assets/background-image.jpg);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+</style>
