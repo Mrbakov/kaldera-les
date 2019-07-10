@@ -1,7 +1,7 @@
 <template>
   <div id="cssmenu">
     <ul>
-      <li class="active" style="margin-left:60px">
+      <li style="margin-left:60px">
         <a href="/">
           <span>Home</span>
         </a>
