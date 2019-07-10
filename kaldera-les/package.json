@@ -9,13 +9,10 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-<<<<<<< HEAD
     "lodash": "^4.17.11",
-=======
     "primeicons": "^1.0.0",
     "primevue": "^1.0.0-beta.3",
     "quill": "^1.3.6",
->>>>>>> c13272853e14a57ea1fb2a9d8a898e2c67b87bc9
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
