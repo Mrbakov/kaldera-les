@@ -19,6 +19,7 @@ export default {
 <style>
 html {
   height: 100vh;
+<<<<<<< HEAD
   background-image: url("./assets/background-image1.jpg");
   background-size: cover;
 }
@@ -36,4 +37,12 @@ html {
   background-repeat: no-repeat;
   background-size: cover; */
 /* }  */
+=======
+  background-image: url(./assets/background-image.jpg);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+>>>>>>> c13272853e14a57ea1fb2a9d8a898e2c67b87bc9
 </style>
