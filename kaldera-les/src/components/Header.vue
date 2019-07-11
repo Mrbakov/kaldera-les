@@ -2,48 +2,57 @@
   <div id="cssmenu">
     <ul>
       <li style="margin-left:60px">
-        <a href="/">
-          <span>Home</span>
-        </a>
+        <router-link :to="{ name: 'homepage' }">
+          <span>{{ $t("homepage") }}</span>
+        </router-link>
       </li>
       <li>
-        <a href="/product-categories">
-          <span>Product Categories</span>
-        </a>
+        <router-link :to="{ name: 'product-categories' }">
+          <span>{{ $t("productCategories") }}</span>
+        </router-link>
       </li>
       <li>
-        <a href="/contacts">
-          <span>Contact</span>
-        </a>
+        <router-link :to="{ name: 'contacts' }">
+          <span>{{ $t("contacts") }}</span>
+        </router-link>
       </li>
       <li id="dropdown">
-        <Dropdown
+        <LanguageDropdown
           v-model="selectedLanguage"
           :options="languages"
-          optionLabel="name"
+          optionLabel="title"
+          optionValue="language"
           placeholder="Language"
-        />
+          @change="$emit('change-locale', selectedLanguage)"
+        >
+          <template #option="slotProps">
+            <div class="p-clearfix p-dropdown-car-option">
+              <flag :iso="slotProps.option.flag" v-bind:squared="false" />
+              <span>{{ slotProps.option.title }}</span>
+            </div>
+          </template>
+        </LanguageDropdown>
       </li>
     </ul>
   </div>
 </template>
-
+npm ru
 <script>
-import Dropdown from "primevue/dropdown";
+import LanguageDropdown from "primevue/dropdown";
 
 export default {
   components: {
-    Dropdown
+    LanguageDropdown
   },
   data() {
     return {
       selectedLanguage: null,
       languages: [
-        { name: "English" },
-        { name: "German" },
-        { name: "Bulgarian" },
-        { name: "French" }
-      ]
+        { flag: "gb", language: "en", title: " English" },
+        { flag: "bg", language: "bg", title: " Български" },
+        { flag: "de", language: "de", title: " Deutsch" }
+      ],
+      activeItem: null
     };
   }
 };
@@ -51,6 +60,7 @@ export default {
 
 <style scoped>
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+
 #cssmenu {
   background: #000000;
   width: auto;
@@ -165,6 +175,25 @@ export default {
 .p-dropdown:not(.p-disabled).p-focus {
   box-shadow: 0 0 0 0.2em black;
   border-color: black;
+}
+
+.language-button {
+  padding: 12px;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: white;
+  background-image: none;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  outline: none;
+  float: right;
+  margin-top: 16px !important;
+  margin-left: 10px;
+  padding-right: 20px;
+}
+button:focus {
+  outline: 0;
 }
 /* TODO: Fix for smaller screens if there is time */
 @media screen and (max-width: 768px) {
