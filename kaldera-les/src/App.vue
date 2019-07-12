@@ -13,11 +13,6 @@ export default {
   components: {
     Header
   },
-  data() {
-    return {
-      number: 1
-    };
-  },
   methods: {
     changeLocale(locale) {
       i18n.locale = locale;
@@ -29,6 +24,7 @@ export default {
 <style>
 html {
   background-image: url(./assets/background-image.jpg);
+  font-family: "Open Sans", sans-serif;
 }
 body {
   height: 100vh;

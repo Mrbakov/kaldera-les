@@ -1,55 +1,49 @@
 <template>
-  <div class="contacts-page-container">
-    <h1>Contacts</h1>
-    <div class="contacts-container">
+  <div class="contacts-box">
+    <div class="contacts">
       <Info />
-      <Location />
     </div>
+    <ContactForm class="contact-form"></ContactForm>
   </div>
 </template>
 
 <script>
-import Location from "@/components/contacts/Location.vue";
 import Info from "@/components/contacts/Info.vue";
+import ContactForm from "@/components/contacts/ContactForm.vue";
 
 export default {
   components: {
-    Location,
-    Info
+    Info,
+    ContactForm
   }
 };
 </script>
 
+// TODO: Write media query for tablet and phone
 <style scoped>
-h1 {
-  width: 80%;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 50px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 3px 3px 4px #000000;
+.contact-form {
+  margin-right: 3%;
+}
 
-  border-bottom: 7px solid black;
-  padding-bottom: 7px;
-}
-.contacts-page-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.contacts-container {
-  width: 100%;
+.contacts-box {
+  height: 100%;
+  width: 80%;
+
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
 
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  color: white;
+  background-color: rgb(0, 0, 0, 0.5);
+
+  border-radius: 15px;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-around;
 }
 </style>
