@@ -50,7 +50,8 @@ export default {
       languages: [
         { flag: "gb", language: "en", title: " English" },
         { flag: "bg", language: "bg", title: " Български" },
-        { flag: "de", language: "de", title: " Deutsch" }
+        { flag: "de", language: "de", title: " Deutsch" },
+        { flag: "fr", language: "fr", title: " Français" }
       ],
       activeItem: null
     };

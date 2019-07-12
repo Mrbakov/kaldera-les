@@ -13,5 +13,10 @@ export const TRANSLATIONS = {
     homepage: "Startseite",
     productCategories: "Produktkategorien",
     contacts: "Kontakte"
+  },
+  fr: {
+    homepage: "Page d'accueil",
+    productCategories: "Catégories de Produits",
+    contacts: "Contacts"
   }
 };
