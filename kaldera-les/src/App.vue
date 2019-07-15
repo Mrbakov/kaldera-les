@@ -16,6 +16,9 @@ export default {
   methods: {
     changeLocale(locale) {
       i18n.locale = locale;
+    },
+    changeActivePage(page) {
+      this.activePage = page;
     }
   }
 };
@@ -23,6 +26,7 @@ export default {
 
 <style>
 html {
+  height: 100%;
   background-image: url(./assets/background-image.jpg);
   font-family: "Open Sans", sans-serif;
 }

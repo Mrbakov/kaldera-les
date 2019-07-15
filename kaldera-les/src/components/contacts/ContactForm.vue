@@ -98,6 +98,6 @@ form {
   margin-right: auto;
   background-color: #0093dc;
   font-size: 15px;
-  outline: none;
+  outline: none !important;
 }
 </style>

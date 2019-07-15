@@ -5,7 +5,7 @@ import { TRANSLATIONS } from "../assets/translations.js";
 Vue.use(VueI18n);
 const i18n = new VueI18n({
   locale: "en", // set locale
-  fallbackLocale: "de", // set fallback locale
+  fallbackLocale: "fr", // set fallback locale
   messages: TRANSLATIONS // set locale messages
 });
 

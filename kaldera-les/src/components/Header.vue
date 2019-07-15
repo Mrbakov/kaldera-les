@@ -1,17 +1,27 @@
 <template>
   <div id="cssmenu">
     <ul>
-      <li style="margin-left:60px">
+      <li
+        v-on:click="setActive('homepage')"
+        :class="{ active: isActive('homepage') }"
+        style="margin-left:60px"
+      >
         <router-link :to="{ name: 'homepage' }">
           <span>{{ $t("homepage") }}</span>
         </router-link>
       </li>
-      <li>
+      <li
+        v-on:click="setActive('product-categories')"
+        :class="{ active: isActive('product-categories') }"
+      >
         <router-link :to="{ name: 'product-categories' }">
           <span>{{ $t("productCategories") }}</span>
         </router-link>
       </li>
-      <li>
+      <li
+        v-on:click="setActive('contacts')"
+        :class="{ active: isActive('contacts') }"
+      >
         <router-link :to="{ name: 'contacts' }">
           <span>{{ $t("contacts") }}</span>
         </router-link>
@@ -22,7 +32,7 @@
           :options="languages"
           optionLabel="title"
           optionValue="language"
-          placeholder="Language"
+          placeholder="English"
           @change="$emit('change-locale', selectedLanguage)"
         >
           <template #option="slotProps">
@@ -55,6 +65,14 @@ export default {
       ],
       activeItem: null
     };
+  },
+  methods: {
+    isActive: function(menuItem) {
+      return this.activeItem === menuItem;
+    },
+    setActive: function(menuItem) {
+      this.activeItem = menuItem; // no need for Vue.set()
+    }
   }
 };
 </script>
@@ -63,7 +81,7 @@ export default {
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 
 #cssmenu {
-  background: #000000;
+  background-color: rgb(0, 0, 0, 0.5);
   width: auto;
   height: 60px;
 }
@@ -145,10 +163,12 @@ export default {
 #cssmenu ul li.last > a:after,
 #cssmenu ul li:last-child > a:after {
   display: none;
+  outline: none;
 }
 
 #cssmenu ul li.active a {
   color: #9c9c9c;
+  outline: none !important;
 }
 
 #cssmenu ul li.active a:before {
@@ -194,7 +214,7 @@ export default {
   padding-right: 20px;
 }
 button:focus {
-  outline: 0;
+  outline: none !important;
 }
 /* TODO: Fix for smaller screens if there is time */
 @media screen and (max-width: 768px) {

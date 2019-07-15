@@ -36,6 +36,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 
   background-color: rgb(0, 0, 0, 0.5);
 
