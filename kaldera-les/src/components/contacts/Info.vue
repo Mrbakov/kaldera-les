@@ -43,7 +43,7 @@ export default {
 <style scoped>
 h1 {
   width: 50%;
-  color: rgb(225, 255, 255);
+  color: rgb(252, 252, 252);
   opacity: 1 !important;
 
   font-family: "Open Sans", sans-serif;
@@ -53,7 +53,7 @@ h1 {
 
 h3 {
   margin-bottom: -5%;
-  color: rgb(225, 255, 255);
+  color: rgb(252, 252, 252);
   font-size: 14px;
   opacity: 1 !important;
 }

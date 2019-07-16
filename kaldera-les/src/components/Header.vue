@@ -11,14 +11,6 @@
         </router-link>
       </li>
       <li
-        v-on:click="setActive('product-categories')"
-        :class="{ active: isActive('product-categories') }"
-      >
-        <router-link :to="{ name: 'product-categories' }">
-          <span>{{ $t("productCategories") }}</span>
-        </router-link>
-      </li>
-      <li
         v-on:click="setActive('contacts')"
         :class="{ active: isActive('contacts') }"
       >
@@ -26,7 +18,47 @@
           <span>{{ $t("contacts") }}</span>
         </router-link>
       </li>
-      <li id="dropdown">
+      <li>
+        <router-link :to="{ name: 'product-categories' }">
+          <span>{{ $t("productCategories") }}</span>
+        </router-link>
+        <div class="wood-species-dropdown">
+          <ul>
+            <li>
+              <WoodCard>
+                <template slot="header">
+                  <img alt="user header" src="demo/images/usercard.png" />
+                </template>
+                <template slot="title">
+                  Advanced Card
+                </template>
+                <template slot="content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Inventore sed consequuntur error repudiandae numquam deserunt
+                  quisquam repellat libero asperiores earum nam nobis, culpa
+                  ratione quam perferendis esse, cupiditate neque quas!
+                </template>
+                <template slot="footer">
+                  <Button
+                    icon="pi pi-check"
+                    label="Save"
+                    class="p-button-raised"
+                  />
+                  <Button
+                    icon="pi pi-times"
+                    label="Cancel"
+                    class="p-button-raised p-button-secondary"
+                    style="margin-left: .5em"
+                  />
+                </template>
+              </WoodCard>
+            </li>
+            <li>Maple</li>
+            <li>Birch</li>
+          </ul>
+        </div>
+      </li>
+      <li id="language-dropdown">
         <LanguageDropdown
           v-model="selectedLanguage"
           :options="languages"
@@ -48,10 +80,14 @@
 </template>
 <script>
 import LanguageDropdown from "primevue/dropdown";
+// import WoodTypes from "primevue/dropdown";
+import WoodCard from "primevue/card";
 
 export default {
   components: {
-    LanguageDropdown
+    LanguageDropdown,
+    WoodCard
+    // WoodTypes
   },
   data() {
     return {
@@ -62,7 +98,13 @@ export default {
         { flag: "de", language: "de", title: " Deutsch" },
         { flag: "fr", language: "fr", title: " Français" }
       ],
-      activeItem: null
+      activeItem: null,
+      selectedWoodSpecies: null,
+      woodSpecies: [
+        { name: "Ash", link: "testLink" },
+        { name: "Maple", link: "testLink" },
+        { name: "Birch", link: "testLink" }
+      ]
     };
   },
   methods: {
@@ -139,6 +181,11 @@ export default {
   color: #9c9c9c;
 }
 
+#cssmenu ul li a:hover + div.wood-species-dropdown {
+  display: block;
+  height: 100px;
+}
+
 #cssmenu ul li a:hover:before {
   width: 100%;
 }
@@ -183,38 +230,35 @@ export default {
   display: none;
 }
 
-#dropdown {
+#language-dropdown {
   float: right;
   margin-top: 16px !important;
   padding-right: 20px;
 }
-.p-dropdown {
+
+#language-dropdown .p-dropdown {
   width: 6em;
   font-size: 22px;
 }
-.p-dropdown:not(.p-disabled).p-focus {
-  box-shadow: 0 0 0 0.2em black;
-  border-color: black;
+#language-dropdown .p-dropdown:not(.p-disabled).p-focus {
+  box-shadow: none;
+  border-color: rgb(0, 0, 0, 0.5);
 }
 
-.language-button {
-  padding: 12px;
-  font-size: 15px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  color: white;
-  background-image: none;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  outline: none;
-  float: right;
-  margin-top: 16px !important;
-  margin-left: 10px;
-  padding-right: 20px;
+.wood-species-dropdown {
+  width: 100%;
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+  height: 0;
+  transition: height 500ms ease-in;
 }
+
 button:focus {
   outline: none !important;
 }
+
 /* TODO: Fix for smaller screens if there is time */
 @media screen and (max-width: 768px) {
   #cssmenu ul li {
