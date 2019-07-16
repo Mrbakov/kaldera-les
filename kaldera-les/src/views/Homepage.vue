@@ -1,54 +1,74 @@
 <template>
-  <div class="row-1">
-    <div class="col-1">
-      <CompanyCard>
-        <template slot="header">
-          <img alt="company logo" src="@/assets/logo.png" />
-        </template>
-        <template slot="title"
-          >Kaldera LES</template
-        >
-        <template slot="content">
-          <table>
-            <tr>
-              <td>Founded:</td>
-              <td>1984</td>
-            </tr>
+  <div>
+    <div class="row-1">
+      <div class="col-1">
+        <CompanyCard>
+          <template slot="header" class="card-header">
+            <span class="card-header">
+              <img
+                class="logo"
+                alt="company logo"
+                src="@/assets/pictures/logo.png"
+              />
+            </span>
+          </template>
+          <template slot="title"
+            >Kaldera LES</template
+          >
+          <template slot="content">
+            <table>
+              <tr>
+                <td>Founded</td>
+                <td>1984</td>
+              </tr>
 
-            <tr>
-              <td>Founder:</td>
-              <td>Todor Todorov</td>
-            </tr>
-            <tr>
-              <td>Number of employees:</td>
-              <td>10 000</td>
-            </tr>
-            <tr>
-              <td>Operating in:</td>
-              <td>France, Bulgaria, Germany</td>
-            </tr>
-          </table>
-        </template>
-      </CompanyCard>
-    </div>
-    <div class="col-2">
-      <div class="about-us-box">
-        <h3>About us</h3>
-        <p class="about-us-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae error
-          animi eligendi velit vitae deserunt. Qui recusandae soluta, quos sint
-          molestiae perspiciatis itaque et ducimus adipisci vel perferendis
-          voluptatem repellendus.
-        </p>
+              <tr>
+                <td>Founder</td>
+                <td>Todor Todorov</td>
+              </tr>
+              <tr>
+                <td>Number of employees</td>
+                <td>10 000</td>
+              </tr>
+              <tr>
+                <td>Operating in</td>
+                <td>France, Bulgaria, Germany</td>
+              </tr>
+            </table>
+          </template>
+        </CompanyCard>
       </div>
-      <div class="why-us">
-        <h2>Why choose us?</h2>
-        <ul class="why-us-list">
-          <li>Because of reason #1</li>
-          <li>Because of reason #2</li>
-          <li>Because of reason #3</li>
-          <li>Because of reason #4</li>
-        </ul>
+      <div class="col-2">
+        <div class="about-us">
+          <h3>About us</h3>
+          <p class="about-us-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            error animi eligendi velit vitae deserunt. Qui recusandae soluta,
+            quos sint molestiae perspiciatis itaque et ducimus adipisci vel
+            perferendis voluptatem repellendus. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nam eius, libero.
+          </p>
+        </div>
+        <div class="why-us">
+          <h2>Why choose us?</h2>
+          <ul>
+            <li>Because of reason #1</li>
+            <li>Because of reason #2</li>
+            <li>Because of reason #3</li>
+            <li>Because of reason #4</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row-2">
+      <h2>Our work site</h2>
+      <div class="images-container">
+        <img
+          class="images"
+          v-for="jobSitePhoto in jobSitePhotos"
+          v-bind:key="jobSitePhoto"
+          :src="jobSitePhoto"
+        />
       </div>
     </div>
   </div>
@@ -60,15 +80,44 @@ import CompanyCard from "primevue/card";
 export default {
   components: {
     CompanyCard
+  },
+  data() {
+    return {
+      jobSitePhotos: [
+        require("@/assets/pictures/job_site_photos/beams_1.jpg"),
+        require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
+        require("@/assets/pictures/job_site_photos/job_site_outside_1.jpg"),
+        require("@/assets/pictures/job_site_photos/job_site_outside_2.jpg"),
+        require("@/assets/pictures/job_site_photos/logs_1.jpg"),
+        require("@/assets/pictures/job_site_photos/logs_2.jpg"),
+        require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
+        require("@/assets/pictures/job_site_photos/planks_1.jpg"),
+        require("@/assets/pictures/job_site_photos/planks_2.jpg"),
+        require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+        require("@/assets/pictures/job_site_photos/stakes_on_site.jpg"),
+        require("@/assets/pictures/job_site_photos/wooden_house.jpg")
+      ]
+    };
   }
 };
 </script>
 
 <style scoped>
+.logo {
+  width: 250px;
+  box-shadow: 8px 5px 15px -5px rgba(0, 0, 0, 0.4);
+}
+
 table {
+  background-color: (0, 0, 0, 0.5);
+
   font-size: 15px;
   border-collapse: collapse;
   width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 td {
@@ -76,8 +125,8 @@ td {
   padding-bottom: 4px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+td:nth-child(even) {
+  color: #0093dc;
 }
 
 h3 {
@@ -94,30 +143,58 @@ h3 {
 
 .col-2 {
   width: 50%;
+  padding: 2.5%;
 }
 
 .p-card {
   width: 320px !important;
-  box-shadow: 8px 5px 15px -5px rgba(0, 0, 0, 0.4);
-}
 
-.about-us-box {
-  padding-left: 1%;
-
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 18px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
 
   border-radius: 15px;
 }
 
+.card-header {
+  display: flex !important;
+  justify-content: center !important;
+  padding-top: 10px !important;
+}
+
+table {
+  background-color: (0, 0, 0, 0.5);
+
+  font-size: 15px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+td:nth-child(even) {
+  color: #0093dc;
+}
+
+.about-us {
+  padding-bottom: 5%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  color: white;
+  font-size: 22px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
 .about-us-text {
   color: white;
-  font-size: 18px;
+  font-size: 19px;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .why-us h2 {
@@ -126,8 +203,51 @@ h3 {
   text-shadow: 2px 2px 4px #000000;
 }
 
-.why-us-list {
+.why-us ul li {
+  margin-bottom: 1%;
+
   font-size: 22px;
   color: #0093dc;
+  text-shadow: 2px 2px 4px #000000;
+  list-style-type: none;
+}
+
+.row-2 {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+}
+
+.images-container {
+  width: 80%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.images {
+  width: 330px;
+  height: 247px;
+
+  margin-bottom: 4%;
+  box-shadow: 8px 8px 15px -5px rgba(0, 0, 0, 0.8);
+  transition: transform 0.4s;
+}
+
+.images:hover {
+  transform: scale(1.2);
+}
+
+.row-2 h2 {
+  width: 60%;
+  padding-bottom: 1%;
+
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
 }
 </style>

@@ -27,7 +27,7 @@ export default {
 <style>
 html {
   height: 100%;
-  background-image: url(./assets/background-image.jpg);
+  background-image: url(./assets/pictures/background-image.jpg);
   font-family: "Open Sans", sans-serif;
 }
 body {

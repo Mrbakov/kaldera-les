@@ -46,7 +46,6 @@
     </ul>
   </div>
 </template>
-npm ru
 <script>
 import LanguageDropdown from "primevue/dropdown";
 
