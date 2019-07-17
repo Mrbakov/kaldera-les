@@ -1,22 +1,30 @@
 export const TRANSLATIONS = {
   en: {
     homepage: "Home",
-    productCategories: "Product Categories",
-    contacts: "Contacts"
+    treeSpecies: "Tree Species",
+    contacts: "Contacts",
+    stake: "Stake",
+    ash: "Ash"
   },
   bg: {
     homepage: "Начална страница",
-    productCategories: "Категории Продукти",
-    contacts: "Контакти"
+    treeSpecies: "Дървесни видове",
+    contacts: "Контакти",
+    stake: "Кол",
+    ash: "Ясен"
   },
   de: {
     homepage: "Startseite",
-    productCategories: "Produktkategorien",
-    contacts: "Kontakte"
+    treeSpecies: "Baumarten",
+    contacts: "Kontakten",
+    stake: "Pfahl",
+    ash: "Esche"
   },
   fr: {
     homepage: "Page d'accueil",
-    productCategories: "Catégories de Produits",
-    contacts: "Contacts"
+    treeSpecies: "Espèces d'arbres",
+    contacts: "Contacts",
+    stake: "pieu",
+    ash: "Frêne"
   }
 };

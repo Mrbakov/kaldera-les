@@ -94,7 +94,6 @@ export default {
         require("@/assets/pictures/job_site_photos/planks_1.jpg"),
         require("@/assets/pictures/job_site_photos/planks_2.jpg"),
         require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-        require("@/assets/pictures/job_site_photos/stakes_on_site.jpg"),
         require("@/assets/pictures/job_site_photos/wooden_house.jpg")
       ]
     };
@@ -222,17 +221,17 @@ td:nth-child(even) {
   width: 80%;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: space-between;
   align-content: space-between;
   flex-wrap: wrap;
 }
 
 .images {
-  width: 330px;
-  height: 247px;
+  width: 315px;
+  height: 236px;
 
-  margin-bottom: 4%;
+  margin: 2%;
   box-shadow: 8px 8px 15px -5px rgba(0, 0, 0, 0.8);
   transition: transform 0.4s;
 }

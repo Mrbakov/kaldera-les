@@ -5,7 +5,6 @@
       method="POST"
       class="gform pure-form pure-form-stacked"
       data-email="mrbakov1@gmail.com"
-      action="https://script.google.com/macros/s/AKfycbxIqq5XK0Nkixnhfsk183BipnHVR7ob4RBer1O2QzLR_BvS9qg/exec"
     >
       <h1>Write us</h1>
       <span class="p-float-label">
@@ -19,7 +18,6 @@
           type="email"
           value=""
           v-model="email"
-          required
         />
         <label for="email">Email</label>
       </span>
@@ -51,6 +49,7 @@ import InputEmail from "primevue/inputtext";
 import InputPhone from "primevue/inputtext";
 import InputMessage from "primevue/textarea";
 import SubmitButton from "primevue/button";
+import axios from "axios";
 
 export default {
   components: {
@@ -66,6 +65,28 @@ export default {
       email: null,
       phone: null
     };
+  },
+  methods: {
+    sendEmail(event) {
+      event.preventDefault();
+      console.log("test");
+      axios
+        .post(
+          "https://script.google.com/macros/s/AKfycbxIqq5XK0Nkixnhfsk183BipnHVR7ob4RBer1O2QzLR_BvS9qg/exec",
+          {
+            name: "Fred",
+            email: "mrbakov@gmail.com",
+            phone: "1234253",
+            message: "Test"
+          }
+        )
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
   }
 };
 </script>
@@ -98,6 +119,6 @@ form {
   margin-right: auto;
   background-color: #0093dc;
   font-size: 15px;
-  outline: none !important;
+  box-shadow: none !important;
 }
 </style>

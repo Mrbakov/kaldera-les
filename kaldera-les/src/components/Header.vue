@@ -19,42 +19,28 @@
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'product-categories' }">
-          <span>{{ $t("productCategories") }}</span>
-        </router-link>
-        <div class="wood-species-dropdown">
-          <ul>
-            <li>
-              <WoodCard>
-                <template slot="header">
-                  <img alt="user header" src="demo/images/usercard.png" />
-                </template>
-                <template slot="title">
-                  Advanced Card
-                </template>
-                <template slot="content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Inventore sed consequuntur error repudiandae numquam deserunt
-                  quisquam repellat libero asperiores earum nam nobis, culpa
-                  ratione quam perferendis esse, cupiditate neque quas!
-                </template>
-                <template slot="footer">
-                  <Button
-                    icon="pi pi-check"
-                    label="Save"
-                    class="p-button-raised"
-                  />
-                  <Button
-                    icon="pi pi-times"
-                    label="Cancel"
-                    class="p-button-raised p-button-secondary"
-                    style="margin-left: .5em"
-                  />
-                </template>
-              </WoodCard>
+        <a>
+          <span>{{ $t("treeSpecies") }}</span>
+        </a>
+        <div class="tree-species-dropdown">
+          <ul id="tree-species-list">
+            <li
+              v-on:click="setActive('')"
+              v-for="(species, index) in treeSpecies"
+              :key="index"
+            >
+              <router-link
+                :to="{
+                  name: 'products',
+                  params: {
+                    id: species.id,
+                    products: species.products
+                  }
+                }"
+              >
+                <span>{{ $t(species.name) }}</span>
+              </router-link>
             </li>
-            <li>Maple</li>
-            <li>Birch</li>
           </ul>
         </div>
       </li>
@@ -80,14 +66,10 @@
 </template>
 <script>
 import LanguageDropdown from "primevue/dropdown";
-// import WoodTypes from "primevue/dropdown";
-import WoodCard from "primevue/card";
 
 export default {
   components: {
-    LanguageDropdown,
-    WoodCard
-    // WoodTypes
+    LanguageDropdown
   },
   data() {
     return {
@@ -99,11 +81,245 @@ export default {
         { flag: "fr", language: "fr", title: " Français" }
       ],
       activeItem: null,
-      selectedWoodSpecies: null,
-      woodSpecies: [
-        { name: "Ash", link: "testLink" },
-        { name: "Maple", link: "testLink" },
-        { name: "Birch", link: "testLink" }
+      treeSpecies: [
+        {
+          id: 1,
+          name: "ash",
+          products: [
+            {
+              id: 1,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "diameter"
+            },
+            {
+              id: 2,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "lw"
+            },
+            {
+              id: 3,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "volume"
+            },
+            {
+              id: 4,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "volume"
+            },
+            {
+              id: 5,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "volume"
+            },
+            {
+              id: 6,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "volume"
+            },
+            {
+              id: 7,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "volume"
+            },
+            {
+              id: 8,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "volume"
+            },
+            {
+              id: 9,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "volume"
+            },
+            {
+              id: 10,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "volume"
+            }
+          ]
+        },
+        {
+          id: 2,
+          name: "Maple",
+          products: [
+            {
+              id: 1,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532"
+            },
+            {
+              id: 2,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532"
+            },
+            {
+              id: 3,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532"
+            },
+            {
+              id: 4,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532"
+            }
+          ]
+        },
+        {
+          id: 3,
+          name: "Birch",
+          products: [
+            {
+              id: 1,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532",
+              boughtBy: "volume"
+            },
+            {
+              id: 2,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532"
+            },
+            {
+              id: 3,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532"
+            },
+            {
+              id: 4,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532"
+            },
+            {
+              id: 5,
+              name: "stake",
+              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
+              property3: "Property",
+              property4: 6521,
+              property5: 51,
+              property6: "Tree",
+              property7: "Testing",
+              property8: "Property 532"
+            }
+          ]
+        }
       ]
     };
   },
@@ -181,11 +397,6 @@ export default {
   color: #9c9c9c;
 }
 
-#cssmenu ul li a:hover + div.wood-species-dropdown {
-  display: block;
-  height: 100px;
-}
-
 #cssmenu ul li a:hover:before {
   width: 100%;
 }
@@ -245,14 +456,22 @@ export default {
   border-color: rgb(0, 0, 0, 0.5);
 }
 
-.wood-species-dropdown {
-  width: 100%;
+.tree-species-dropdown {
   display: none;
   position: absolute;
-  left: 0;
   background-color: rgb(0, 0, 0, 0.5);
-  height: 0;
-  transition: height 500ms ease-in;
+}
+
+div.tree-species-dropdown:hover {
+  display: block;
+}
+
+#cssmenu ul li a:hover + div.tree-species-dropdown {
+  display: block;
+}
+
+#tree-species-list {
+  list-style-type: none;
 }
 
 button:focus {

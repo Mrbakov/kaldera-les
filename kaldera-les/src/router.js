@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Homepage from "@/views/Homepage.vue";
-import ProductCategories from "@/views/ProductCategories.vue";
+import Products from "@/views/Products.vue";
 import Contacts from "@/views/Contacts.vue";
 
 Vue.use(Router);
@@ -15,9 +15,10 @@ export default new Router({
       component: Homepage
     },
     {
-      path: "/product-categories",
-      name: "product-categories",
-      component: ProductCategories
+      path: "/products/:id",
+      name: "products",
+      component: Products,
+      props: true
     },
     {
       path: "/contacts",
