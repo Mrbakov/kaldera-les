@@ -6,6 +6,17 @@ import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
 import i18n from "@/plugins/i18n";
 import FlagIcon from "vue-flag-icon";
+import "primevue/resources/themes/nova-light/theme.css";
+import "primevue/resources/primevue.min.css";
+import "primeicons/primeicons.css";
+import ToastService from "primevue/toastservice";
+import vClickOutside from "v-click-outside";
+
+Vue.use(FlagIcon);
+Vue.use(ToastService);
+Vue.use(vClickOutside);
+
+Vue.config.productionTip = false;
 
 const requireComponent = require.context(
   "./components",
@@ -22,14 +33,6 @@ requireComponent.keys().forEach(fileName => {
 
   Vue.component(componentName, componentConfig.default || componentConfig);
 });
-import "primevue/resources/themes/nova-light/theme.css";
-import "primevue/resources/primevue.min.css";
-import "primeicons/primeicons.css";
-import ToastService from "primevue/toastservice";
-
-Vue.use(FlagIcon);
-Vue.use(ToastService);
-Vue.config.productionTip = false;
 
 new Vue({
   router,

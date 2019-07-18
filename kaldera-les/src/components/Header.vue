@@ -27,6 +27,7 @@
                   name: 'products',
                   params: {
                     id: species.id,
+                    species: species.name,
                     products: species.products
                   }
                 }"

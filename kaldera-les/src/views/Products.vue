@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>{{ $t(species) }}</h1>
     <ul class="products-list">
       <li v-for="product in products" :key="product.id">
         <ProductCard>
@@ -44,42 +45,70 @@
           </template>
           <template slot="footer">
             <span class="card-footer">
-              <OrderFormButon
+              <OrderDialogButton
                 label="Order"
                 class="p-button-raised"
-                @click="open(product)"
+                @click="openDialog(product)"
               />
             </span>
           </template>
         </ProductCard>
       </li>
     </ul>
-    <OrderDialog header="Godfather I" :visible.sync="display">
+    <OrderDialog
+      header="Order"
+      :visible.sync="display"
+      v-click-outside="closeDialog"
+      contentStyle="height: 550px"
+    >
       <form
         id="gform"
         class="gform pure-form pure-form-stacked"
         data-email="mrbakov1@gmail.com"
       >
-        <h1>Write us</h1>
-        <span class="p-float-label">
-          <InputName id="name" name="name" type="text" v-model="name" />
-          <label for="name">Name</label>
-        </span>
-        <span class="p-float-label">
-          <InputEmail
-            id="email"
-            name="email"
-            type="email"
-            value=""
-            v-model="email"
-          />
-          <label for="email">Email</label>
-        </span>
-        <span class="p-float-label">
-          <InputPhone id="phone" name="phone" type="text" v-model="phone" />
-          <label for="phone">Phone</label>
-        </span>
-        <InputMessage
+        <Name
+          id="name"
+          name="name"
+          type="text"
+          v-model="name"
+          placeholder="Name"
+        />
+        <Email
+          id="email"
+          name="email"
+          type="email"
+          value=""
+          v-model="email"
+          placeholder="Email"
+        />
+        <Phone
+          id="phone"
+          name="phone"
+          type="text"
+          v-model="phone"
+          placeholder="Phone"
+        />
+        <Class v-model="grade" placeholder="Grade" />
+        <Volume
+          id="volume"
+          v-model="volume"
+          name="volume"
+          placeholder="Volume"
+        />
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">cm</span>
+          <LW placeholder="Diameter" />
+        </div>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">m</span>
+          <Diameter id="length" placeholder="Length" />
+        </div>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">m</span>
+          <Diameter id="width" placeholder="Width" />
+        </div>
+        <label for="Message"> Additional requests</label>
+        <Message
           class="p-float-label"
           rows="5"
           cols="30"
@@ -87,15 +116,7 @@
           name="message"
           v-model="message"
         />
-        <InputClassDropdown
-          name="class"
-          v-model="selectedClass"
-          :options="classes"
-          optionLabel="class"
-          placeholder="Select a class"
-        />
-        <InputVolumeSpinner v-model="volume" name="volume" />
-        <OrderButton @click="sendEmail($event)" label="Submit" />
+        <OrderButton @click="sendOrder($event)" label="Submit" />
       </form>
     </OrderDialog>
   </div>
@@ -109,65 +130,141 @@
 
 <script>
 import ProductCard from "primevue/card";
-import OrderFormButon from "primevue/button";
+import OrderDialogButton from "primevue/button";
 import OrderDialog from "primevue/dialog";
 import OrderButton from "primevue/button";
 
-import InputName from "primevue/inputtext";
-import InputEmail from "primevue/inputtext";
-import InputPhone from "primevue/inputtext";
-import InputMessage from "primevue/textarea";
-import InputClassDropdown from "primevue/dropdown";
-import InputVolumeSpinner from "primevue/spinner";
+import Name from "primevue/inputtext";
+import Email from "primevue/inputtext";
+import Phone from "primevue/inputtext";
+import Message from "primevue/textarea";
+import Class from "primevue/inputtext";
+import Volume from "primevue/spinner";
+import LW from "primevue/inputtext";
+import Diameter from "primevue/inputtext";
+import axios from "axios";
 
 export default {
-  props: ["products"],
+  props: ["species", "products"],
   components: {
     ProductCard,
-    OrderFormButon,
+    OrderDialogButton,
     OrderDialog,
     OrderButton,
 
-    InputName,
-    InputEmail,
-    InputPhone,
-    InputMessage,
-    InputClassDropdown,
-    InputVolumeSpinner
-  },
-  methods: {
-    open(product) {
-      if (product.boughtBy === "diameter") {
-        this.boughtByDiameter = true;
-      } else if (product.boughtByLengthAndWidth === "lw") {
-        this.boughtByLengthAndWidth = true;
-      }
-      this.display = true;
-    },
-    close() {
-      this.display = false;
-      this.boughtByLengthAndWidth = false;
-      this.boughtByDiameter = false;
-    }
+    Name,
+    Email,
+    Phone,
+    Message,
+    Class,
+    Volume,
+    LW,
+    Diameter
   },
   data() {
     return {
-      boughtByDiameter: false,
-      boughtByLengthAndWidth: false,
+      buyDiameter: false,
+      buyLW: false,
       display: false,
-      name: null,
-      email: null,
-      phone: null,
-      message: null,
-      selectedClass: null,
-      classes: ["A", "B", "C", "D", "E"],
-      volume: null
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+      grade: "",
+      volume: "",
+      diameter: "",
+      length: "",
+      width: ""
     };
+  },
+  methods: {
+    openDialog(product) {
+      if (product.boughtBy === "diameter") {
+        this.buyDiameter = true;
+      } else if (product.boughtBy === "lw") {
+        this.buyLW = true;
+      }
+      this.display = true;
+    },
+    closeDialog(event, el) {
+      this.display = false;
+      this.buyLW = false;
+      this.buyDiameter = false;
+
+      this.name = "";
+      this.email = "";
+      this.phone = "";
+      this.message = "";
+      this.grade = "";
+      this.volume = "";
+      this.diameter = "";
+      this.length = "";
+      this.width = "";
+    },
+    sendOrder(event) {
+      event.preventDefault();
+
+      var formData = new FormData();
+      formData.append("name", this.name);
+      formData.append("email", this.email);
+      formData.append("phone", this.phone);
+      formData.append("message", this.message);
+      formData.append("grade", this.grade);
+      formData.append("volume", this.volume);
+      formData.append("diameter", this.message);
+      formData.append("length", this.length);
+      formData.append("width", this.width);
+
+      axios
+        .post(
+          "https://script.google.com/macros/s/AKfycbxIqq5XK0Nkixnhfsk183BipnHVR7ob4RBer1O2QzLR_BvS9qg/exec",
+          formData
+        )
+        .then(
+          function(response) {
+            console.log(response);
+            this.name = "";
+            this.email = "";
+            this.phone = "";
+            this.message = "";
+            this.grade = "";
+            this.volume = "";
+            this.diameter = "";
+            this.length = "";
+            this.width = "";
+            this.$toast.add({
+              severity: "success",
+              summary: "Success Message",
+              detail: "Order submitted",
+              life: 4000
+            });
+          }.bind(this)
+        )
+        .catch(
+          function(error) {
+            console.log(error);
+            this.$toast.add({
+              severity: "error",
+              summary: "Error message",
+              detail: "Order failed",
+              life: 4000
+            });
+          }.bind(this)
+        );
+    }
   }
 };
 </script>
 
 <style scoped>
+h1 {
+  padding-left: 4%;
+
+  color: white;
+  font-size: 35px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
 .products-list {
   display: flex;
   justify-content: flex-start;
@@ -228,5 +325,20 @@ td:nth-child(even) {
 
 .p-button.p-button-raised {
   box-shadow: none !important;
+}
+
+#gform {
+  height: 530px;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.class {
+  z-index: 1000 !important;
+  position: relative !important;
 }
 </style>
