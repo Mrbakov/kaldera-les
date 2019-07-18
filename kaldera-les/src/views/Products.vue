@@ -97,17 +97,16 @@
         />
         <div class="p-inputgroup">
           <span class="p-inputgroup-addon">cm</span>
-          <LW placeholder="Diameter" />
+          <LW placeholder="Diameter" v-model="diameter" />
         </div>
         <div class="p-inputgroup">
           <span class="p-inputgroup-addon">m</span>
-          <Diameter id="length" placeholder="Length" />
+          <Diameter id="length" placeholder="Length" v-model="length" />
         </div>
         <div class="p-inputgroup">
           <span class="p-inputgroup-addon">m</span>
-          <Diameter id="width" placeholder="Width" />
+          <Diameter id="width" placeholder="Width" v-model="width" />
         </div>
-        <label for="Message"> Additional requests</label>
         <Message
           class="p-float-label"
           rows="5"
@@ -115,6 +114,7 @@
           id="message"
           name="message"
           v-model="message"
+          placeholder="Additional requests"
         />
         <OrderButton @click="sendOrder($event)" label="Submit" />
       </form>
@@ -163,8 +163,6 @@ export default {
   },
   data() {
     return {
-      buyDiameter: false,
-      buyLW: false,
       display: false,
       name: "",
       email: "",
@@ -179,17 +177,10 @@ export default {
   },
   methods: {
     openDialog(product) {
-      if (product.boughtBy === "diameter") {
-        this.buyDiameter = true;
-      } else if (product.boughtBy === "lw") {
-        this.buyLW = true;
-      }
       this.display = true;
     },
     closeDialog(event, el) {
       this.display = false;
-      this.buyLW = false;
-      this.buyDiameter = false;
 
       this.name = "";
       this.email = "";
