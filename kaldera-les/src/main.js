@@ -25,8 +25,10 @@ requireComponent.keys().forEach(fileName => {
 import "primevue/resources/themes/nova-light/theme.css";
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
+import ToastService from "primevue/toastservice";
 
 Vue.use(FlagIcon);
+Vue.use(ToastService);
 Vue.config.productionTip = false;
 
 new Vue({

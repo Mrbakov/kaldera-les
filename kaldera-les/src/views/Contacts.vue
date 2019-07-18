@@ -47,4 +47,8 @@ export default {
   display: flex;
   justify-content: space-around;
 }
+
+.p-emailSentMessages {
+  width: 40%;
+}
 </style>

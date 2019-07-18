@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header v-on:change-locale="changeLocale" />
+    <Toast />
     <router-view />
   </div>
 </template>
@@ -8,10 +9,12 @@
 <script>
 import Header from "@/components/Header.vue";
 import i18n from "@/plugins/i18n";
+import Toast from "primevue/toast";
 
 export default {
   components: {
-    Header
+    Header,
+    Toast
   },
   methods: {
     changeLocale(locale) {

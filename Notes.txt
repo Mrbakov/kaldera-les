@@ -29,35 +29,8 @@
           <span>{{ $t("productCategories") }}</span>
         </router-link>
 
-
-///////////////////////////////////////////////////////
-<!-- <li>
-              <router-link :to="{ name: 'products' }">
-                <span>Maple</span>
-              </router-link>
-            </li>
-            <li>
-              <router-link :to="{ name: 'products' }">
-                <span>Birch</span>
-              </router-link>
-            </li>
-            <li>
-              <router-link :to="{ name: 'products' }">
-                <span>Pine</span>
-              </router-link>
-            </li>
-            <li>
-              <router-link :to="{ name: 'products' }">
-                <span>Fir</span>
-              </router-link>
-            </li>
-            <li>
-              <router-link :to="{ name: 'products' }">
-                <span>Acacia</span>
-              </router-link>
-            </li> -->
-
 ////////////////////
+
  v-on:click="setActive('species')"
 :class="{ active: isActive('species') }"
 

@@ -95,7 +95,6 @@
           placeholder="Select a class"
         />
         <InputVolumeSpinner v-model="volume" name="volume" />
-        <!-- TODO: Implement the other fields -->
         <OrderButton @click="sendEmail($event)" label="Submit" />
       </form>
     </OrderDialog>

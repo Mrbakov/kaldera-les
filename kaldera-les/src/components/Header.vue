@@ -1,19 +1,12 @@
 <template>
   <div id="cssmenu">
     <ul>
-      <li
-        v-on:click="setActive('homepage')"
-        :class="{ active: isActive('homepage') }"
-        style="margin-left:60px"
-      >
+      <li style="margin-left:60px">
         <router-link :to="{ name: 'homepage' }">
           <span>{{ $t("homepage") }}</span>
         </router-link>
       </li>
-      <li
-        v-on:click="setActive('contacts')"
-        :class="{ active: isActive('contacts') }"
-      >
+      <li>
         <router-link :to="{ name: 'contacts' }">
           <span>{{ $t("contacts") }}</span>
         </router-link>
@@ -368,6 +361,10 @@ export default {
   margin-top: 6px;
 }
 
+#cssmenu ul li:hover {
+  cursor: context-menu;
+}
+
 #cssmenu.align-right ul li {
   float: right;
   text-decoration: none;
@@ -391,6 +388,7 @@ export default {
   -ms-transition: color 0.25s;
   -o-transition: color 0.25s;
   transition: color 0.25s;
+  outline: 0 !important;
 }
 
 #cssmenu ul li a:hover {

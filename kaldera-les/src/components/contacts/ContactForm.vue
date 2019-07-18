@@ -1,8 +1,8 @@
 <template>
   <div>
     <form
+      v-on:submit="sendEmail($event)"
       id="gform"
-      method="POST"
       class="gform pure-form pure-form-stacked"
       data-email="mrbakov1@gmail.com"
     >
@@ -31,6 +31,8 @@
         cols="30"
         id="message"
         name="message"
+        v-model="message"
+        type="text"
       />
       <SubmitButton label="Submit" />
     </form>
@@ -61,31 +63,52 @@ export default {
   },
   data() {
     return {
-      name: null,
-      email: null,
-      phone: null
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
     };
   },
   methods: {
     sendEmail(event) {
       event.preventDefault();
-      console.log("test");
+
+      var formData = new FormData();
+      formData.append("name", this.name);
+      formData.append("email", this.email);
+      formData.append("phone", this.phone);
+      formData.append("message", this.message);
       axios
         .post(
           "https://script.google.com/macros/s/AKfycbxIqq5XK0Nkixnhfsk183BipnHVR7ob4RBer1O2QzLR_BvS9qg/exec",
-          {
-            name: "Fred",
-            email: "mrbakov@gmail.com",
-            phone: "1234253",
-            message: "Test"
-          }
+          formData
         )
-        .then(function(response) {
-          console.log(response);
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+        .then(
+          function(response) {
+            console.log(response);
+            this.name = "";
+            this.email = "";
+            this.phone = "";
+            this.message = "";
+            this.$toast.add({
+              severity: "success",
+              summary: "Success Message",
+              detail: "Order submitted",
+              life: 4000
+            });
+          }.bind(this)
+        )
+        .catch(
+          function(error) {
+            console.log(error);
+            this.$toast.add({
+              severity: "error",
+              summary: "Error message",
+              detail: "Order failed",
+              life: 4000
+            });
+          }.bind(this)
+        );
     }
   }
 };
