@@ -6,10 +6,10 @@
       class="gform pure-form pure-form-stacked"
       data-email="mrbakov1@gmail.com"
     >
-      <h1>Write us</h1>
+      <h1>{{ $t("writeUs") }}</h1>
       <span class="p-float-label">
         <InputName id="name" name="name" type="text" v-model="name" />
-        <label for="name">Name</label>
+        <label for="name">{{ $t("nameLabel") }}</label>
       </span>
       <span class="p-float-label">
         <InputEmail
@@ -19,11 +19,11 @@
           value=""
           v-model="email"
         />
-        <label for="email">Email</label>
+        <label for="email">{{ $t("emailLabel") }}</label>
       </span>
       <span class="p-float-label">
         <InputPhone id="phone" name="phone" type="text" v-model="phone" />
-        <label for="phone">Phone</label>
+        <label for="phone">{{ $t("phoneLabel") }}</label>
       </span>
       <InputMessage
         class="p-float-label"
@@ -33,8 +33,9 @@
         name="message"
         v-model="message"
         type="text"
+        :placeholder="$t('messagePlaceholder')"
       />
-      <SubmitButton label="Submit" />
+      <SubmitButton :label="$t('submitLabel')" />
     </form>
   </div>
 </template>

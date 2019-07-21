@@ -32,6 +32,7 @@ export default {
   margin: auto;
   margin-top: 3%;
   margin-bottom: 3%;
+  padding-bottom: 15px;
 
   display: flex;
   justify-content: space-around;

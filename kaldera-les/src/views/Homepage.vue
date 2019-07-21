@@ -12,9 +12,6 @@
               />
             </span>
           </template>
-          <template slot="title"
-            >Kaldera LES</template
-          >
           <template slot="content">
             <table>
               <tr>
@@ -40,28 +37,24 @@
       </div>
       <div class="col-2">
         <div class="about-us">
-          <h3>About us</h3>
+          <h3>{{ $t("aboutUs") }}</h3>
           <p class="about-us-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            error animi eligendi velit vitae deserunt. Qui recusandae soluta,
-            quos sint molestiae perspiciatis itaque et ducimus adipisci vel
-            perferendis voluptatem repellendus. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Nam eius, libero.
+            {{ $t("aboutUsText") }}
           </p>
         </div>
         <div class="why-us">
-          <h2>Why choose us?</h2>
+          <h2>{{ $t("whyUs") }}</h2>
           <ul>
-            <li>Because of reason #1</li>
-            <li>Because of reason #2</li>
-            <li>Because of reason #3</li>
-            <li>Because of reason #4</li>
+            <li>{{ $t("reason1") }}</li>
+            <li>{{ $t("reason2") }}</li>
+            <li>{{ $t("reason3") }}</li>
+            <li>{{ $t("reason4") }}</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="row-2">
-      <h2>Our work site</h2>
+      <h2>{{ $t("workSite") }}</h2>
       <div class="images-container">
         <img
           class="images"
