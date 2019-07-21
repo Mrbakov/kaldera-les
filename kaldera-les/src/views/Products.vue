@@ -310,6 +310,8 @@ td:nth-child(even) {
 }
 
 .p-button {
+  width: 100%;
+
   font-size: 14px;
   font-weight: bold;
 }

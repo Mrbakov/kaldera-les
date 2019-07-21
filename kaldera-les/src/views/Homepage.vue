@@ -179,20 +179,20 @@ td:nth-child(even) {
   flex-wrap: wrap;
 
   color: white;
-  font-size: 22px;
-  text-shadow: 2px 2px 4px #000000;
+  font-size: 27px;
+  text-shadow: 4px 4px 6px #000;
 }
 
 .about-us-text {
   color: white;
   font-size: 19px;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 4px 4px 6px #000;
 }
 
 .why-us h2 {
   font-size: 20px;
   color: white;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 4px 4px 6px #000;
 }
 
 .why-us ul li {
@@ -200,7 +200,7 @@ td:nth-child(even) {
 
   font-size: 22px;
   color: #0093dc;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 4px 4px 6px #000;
   list-style-type: none;
 }
 
@@ -214,7 +214,7 @@ td:nth-child(even) {
   width: 80%;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: space-between;
   align-content: space-between;
   flex-wrap: wrap;
