@@ -1,5 +1,5 @@
 <template>
-  <div id="cssmenu">
+  <div id="header">
     <ul>
       <li style="margin-left:60px">
         <router-link :to="{ name: 'homepage' }">
@@ -17,11 +17,7 @@
         </a>
         <div class="tree-species-dropdown">
           <ul id="tree-species-list">
-            <li
-              v-on:click="setActive('')"
-              v-for="(species, index) in treeSpecies"
-              :key="index"
-            >
+            <li v-for="(species, index) in treeSpecies" :key="index">
               <router-link
                 :to="{
                   name: 'products',
@@ -38,24 +34,22 @@
           </ul>
         </div>
       </li>
-      <li id="language-dropdown">
-        <LanguageDropdown
-          v-model="selectedLanguage"
-          :options="languages"
-          optionLabel="title"
-          optionValue="language"
-          placeholder="English"
-          @change="$emit('change-locale', selectedLanguage)"
-        >
-          <template #option="slotProps">
-            <div class="p-clearfix p-dropdown-car-option">
-              <flag :iso="slotProps.option.flag" v-bind:squared="false" />
-              <span>{{ slotProps.option.title }}</span>
-            </div>
-          </template>
-        </LanguageDropdown>
-      </li>
     </ul>
+    <LanguageDropdown
+      v-model="selectedLanguage"
+      :options="languages"
+      optionLabel="title"
+      optionValue="language"
+      placeholder="English"
+      @change="$emit('change-locale', selectedLanguage)"
+    >
+      <template #option="slotProps">
+        <div class="p-clearfix p-dropdown-car-option">
+          <flag :iso="slotProps.option.flag" v-bind:squared="false" />
+          <span>{{ slotProps.option.title }}</span>
+        </div>
+      </template>
+    </LanguageDropdown>
   </div>
 </template>
 <script>
@@ -74,7 +68,6 @@ export default {
         { flag: "de", language: "de", title: " Deutsch" },
         { flag: "fr", language: "fr", title: " Français" }
       ],
-      activeItem: null,
       treeSpecies: [
         {
           id: 1,
@@ -316,14 +309,6 @@ export default {
         }
       ]
     };
-  },
-  methods: {
-    isActive: function(menuItem) {
-      return this.activeItem === menuItem;
-    },
-    setActive: function(menuItem) {
-      this.activeItem = menuItem; // no need for Vue.set()
-    }
   }
 };
 </script>
@@ -331,22 +316,29 @@ export default {
 <style scoped>
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 
-#cssmenu {
-  background-color: rgb(0, 0, 0, 0.5);
+#header {
   width: auto;
   height: 60px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: rgb(0, 0, 0, 0.5);
 }
 
-#cssmenu ul {
-  list-style: none;
+#header ul {
   margin: 0;
   padding: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  list-style: none;
   line-height: 1;
-  display: block;
-  zoom: 1;
 }
 
-#cssmenu ul:after {
+#header ul:after {
   content: " ";
   display: block;
   font-size: 0;
@@ -355,27 +347,25 @@ export default {
   visibility: hidden;
 }
 
-#cssmenu ul li {
+#header ul li {
   display: inline-block;
   padding-left: 10px;
-  /* Adjust when adjusting header height and font size: */
-  margin-top: 6px;
 }
 
-#cssmenu ul li:hover {
+#header ul li:hover {
   cursor: context-menu;
 }
 
-#cssmenu.align-right ul li {
+#header.align-right ul li {
   float: right;
   text-decoration: none;
 }
 
-#cssmenu.align-center ul {
+#header.align-center ul {
   text-align: center;
 }
 
-#cssmenu ul li a {
+#header ul li a {
   color: #ffffff;
   text-decoration: none;
   display: block;
@@ -392,15 +382,15 @@ export default {
   outline: 0 !important;
 }
 
-#cssmenu ul li a:hover {
+#header ul li a:hover {
   color: #9c9c9c;
 }
 
-#cssmenu ul li a:hover:before {
+#header ul li a:hover:before {
   width: 100%;
 }
 
-#cssmenu ul li a:before {
+#header ul li a:before {
   content: "";
   display: block;
   position: absolute;
@@ -416,41 +406,41 @@ export default {
   transition: width 0.25s;
 }
 
-#cssmenu ul li.last > a:after,
-#cssmenu ul li:last-child > a:after {
+#header ul li.last > a:after,
+#header ul li:last-child > a:after {
   display: none;
   outline: none;
 }
 
-#cssmenu ul li.active a {
+#header ul li.active a {
   color: #9c9c9c;
   outline: none !important;
 }
 
-#cssmenu ul li.active a:before {
+#header ul li.active a:before {
   width: 100%;
 }
 
-#cssmenu.align-right li.last > a:after,
-#cssmenu.align-right li:last-child > a:after {
+#header.align-right li.last > a:after,
+#header.align-right li:last-child > a:after {
   display: block;
 }
 
-#cssmenu.align-right li:first-child a:after {
+#header.align-right li:first-child a:after {
   display: none;
 }
 
-#language-dropdown {
-  float: right;
-  margin-top: 16px !important;
-  padding-right: 20px;
-}
-
-#language-dropdown .p-dropdown {
+.p-dropdown {
+  height: 1.4em;
   width: 6em;
+
+  margin-right: 2%;
+  display: flex;
+  align-self: center;
+
   font-size: 22px;
 }
-#language-dropdown .p-dropdown:not(.p-disabled).p-focus {
+.p-dropdown:not(.p-disabled).p-focus {
   box-shadow: none;
   border-color: rgb(0, 0, 0, 0.5);
 }
@@ -465,7 +455,7 @@ div.tree-species-dropdown:hover {
   display: block;
 }
 
-#cssmenu ul li a:hover + div.tree-species-dropdown {
+#header ul li a:hover + div.tree-species-dropdown {
   display: block;
 }
 
@@ -479,25 +469,25 @@ button:focus {
 
 /* TODO: Fix for smaller screens if there is time */
 @media screen and (max-width: 768px) {
-  #cssmenu ul li {
+  #header ul li {
     float: none;
     display: block;
   }
-  #cssmenu ul li a {
+  #header ul li a {
     width: 100%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-bottom: 2px solid #9c9c9c;
   }
-  #cssmenu ul li.last > a,
-  #cssmenu ul li:last-child > a {
+  #header ul li.last > a,
+  #header ul li:last-child > a {
     border: 0;
   }
-  #cssmenu ul li a:after {
+  #header ul li a:after {
     display: none;
   }
-  #cssmenu ul li a:before {
+  #header ul li a:before {
     display: none;
   }
 }
