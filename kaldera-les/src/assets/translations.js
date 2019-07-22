@@ -34,6 +34,12 @@ export const TRANSLATIONS = {
     phoneLabel: "Phone",
     messagePlaceholder: "Message",
     submitLabel: "Submit",
+    success: "Success",
+    successMessage: "Success Message",
+    successDetail: "Test",
+    error: "error",
+    errorMessage: "error Message",
+    errorDetail: "Test",
 
     // Products:
     stake: "Stake",
