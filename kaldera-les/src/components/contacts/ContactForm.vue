@@ -93,8 +93,13 @@ export default {
             this.message = "";
             this.$toast.add({
               severity: "success",
+<<<<<<< HEAD
               summary: "Success",
               detail: "Message submitted",
+=======
+              summary: "{{$t('successMessage')}}",
+              detail: "{{$t('successMessage')}}",
+>>>>>>> b5613582fe2ea0ede6fcb13c715006b4e6f564a8
               life: 4000
             });
           }.bind(this)
@@ -103,9 +108,15 @@ export default {
           function(error) {
             console.log(error);
             this.$toast.add({
+<<<<<<< HEAD
               severity: "error",
               summary: "Error",
               detail: "Message was not submitted",
+=======
+              severity: error,
+              summary: "errorMessage",
+              detail: "errorDetail",
+>>>>>>> b5613582fe2ea0ede6fcb13c715006b4e6f564a8
               life: 4000
             });
           }.bind(this)
