@@ -39,12 +39,6 @@ export const TRANSLATIONS = {
     phoneLabel: "Phone",
     messagePlaceholder: "Message",
     submitLabel: "Submit",
-    success: "Success",
-    successMessage: "Success Message",
-    successDetail: "Test",
-    error: "error",
-    errorMessage: "error Message",
-    errorDetail: "Test",
 
     // Products:
     customOrder: "Custom Order",
@@ -109,13 +103,6 @@ export const TRANSLATIONS = {
     phoneLabel: "Телефон",
     messagePlaceholder: "Съобщение",
     submitLabel: "Изпрати",
-    success: "Success",
-    successMessage: "Success Message",
-    successDetail: "Test",
-    error: "error",
-    errorMessage: "error Message",
-    errorDetail: "Test",
-    required: "This field is required",
 
     // Products:
     customOrder: "Продукт по поръчка",
@@ -141,11 +128,68 @@ export const TRANSLATIONS = {
     cm: "см"
   },
   de: {
+    // Header
     homepage: "Startseite",
     treeSpecies: "Baumarten",
     contacts: "Kontakten",
-    stake: "Pfahl",
-    ash: "Esche"
+
+    // Homepage:
+    aboutUs: "Über uns",
+    aboutUsText:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae error animi eligendi velit vitae deserunt. Qui recusandae soluta, quos sint molestiae perspiciatis itaque et ducimus adipisci vel perferendis voluptatem repellendus. Lorem ipsum dolor sit ametconsectetur adipisicing elit. Nam eius, libero.",
+    whyUs: "Warum uns wählen",
+    reason1: "Hohe Qualität",
+    reason2: "Präzise Ausführung",
+    reason3: "Sichere Lieferung",
+    workSite: "Unsere Arbeitsstelle",
+    founded: "Gegründet",
+    founderHeading: "Gründer",
+    founder: "Тодор Тодоров",
+    employees: "Anzahl der Angestellten",
+    operatingIn: "Wir arbeiten ins",
+    countries: "Bulgarien, Deutschland, Frankreich",
+
+    // Contacts
+    // Info
+    contactUs: "Kontaktiere uns",
+    addressHeading: "Kontaktiere uns",
+    address: 'Velingrad, "Hristo Smirenski" 5',
+    workingTimeHeading: "Arbeitszeit",
+    workingTime: "09:00 zu 17:00",
+    emailHeading: "E-Mail",
+    email: "kalderales@abv.bg",
+    phoneHeading: "Telefon",
+    phone: "+359 88 722 0252",
+    // ContactForm
+    writeUs: "Schreiben Sie uns",
+    nameLabel: "Name",
+    emailLabel: "E-Mail",
+    phoneLabel: "Telefon",
+    messagePlaceholder: "Nachricht",
+    submitLabel: "Senden",
+
+    // Products:
+    customOrder: "Produkt auf bestellung",
+    whitePine: "Weiße Kiefer",
+    plank: "Brett",
+    paneling: "Täfelung",
+    formworkPaneling: "Shalung",
+    dogHouse: "Hundehütte",
+    acacia: "Acacia",
+    vineyardStake: "Pfahl für Weinberg",
+    spruce: "Fichte",
+    fir: "Tanne",
+    // Order dialog
+    namePlaceholder: "Dein Name",
+    order: "Bestellen",
+    grade: "Grad",
+    quantity: "Количество",
+    diameter: "Durchmesser",
+    length: "Länge",
+    width: "Breite",
+    аdditionalRequests: "Zusätzliche Anfragen",
+    m: "m",
+    cm: "cm"
   },
   fr: {
     homepage: "Page d'accueil",
