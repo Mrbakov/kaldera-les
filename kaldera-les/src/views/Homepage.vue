@@ -15,21 +15,21 @@
           <template slot="content">
             <table>
               <tr>
-                <td>Founded</td>
+                <td>{{ $t("founded") }}</td>
                 <td>1984</td>
               </tr>
 
               <tr>
-                <td>Founder</td>
-                <td>Todor Todorov</td>
+                <td>{{ $t("founderHeading") }}</td>
+                <td>{{ $t("founder") }}</td>
               </tr>
               <tr>
-                <td>Number of employees</td>
+                <td>{{ $t("employees") }}</td>
                 <td>10 000</td>
               </tr>
               <tr>
-                <td>Operating in</td>
-                <td>France, Bulgaria, Germany</td>
+                <td>{{ $t("operatingIn") }}</td>
+                <td>{{ $t("countries") }}</td>
               </tr>
             </table>
           </template>
@@ -48,7 +48,6 @@
             <li>{{ $t("reason1") }}</li>
             <li>{{ $t("reason2") }}</li>
             <li>{{ $t("reason3") }}</li>
-            <li>{{ $t("reason4") }}</li>
           </ul>
         </div>
       </div>
@@ -78,16 +77,13 @@ export default {
     return {
       jobSitePhotos: [
         require("@/assets/pictures/job_site_photos/beams_1.jpg"),
+        require("@/assets/pictures/job_site_photos/factory_1.jpg"),
         require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
-        require("@/assets/pictures/job_site_photos/job_site_outside_1.jpg"),
-        require("@/assets/pictures/job_site_photos/job_site_outside_2.jpg"),
         require("@/assets/pictures/job_site_photos/logs_1.jpg"),
-        require("@/assets/pictures/job_site_photos/logs_2.jpg"),
         require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
-        require("@/assets/pictures/job_site_photos/planks_1.jpg"),
-        require("@/assets/pictures/job_site_photos/planks_2.jpg"),
-        require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-        require("@/assets/pictures/job_site_photos/wooden_house.jpg")
+        require("@/assets/pictures/job_site_photos/machine_1.jpg"),
+        require("@/assets/pictures/job_site_photos/machine_2.jpg"),
+        require("@/assets/pictures/job_site_photos/storage_1.jpg")
       ]
     };
   }
@@ -122,7 +118,7 @@ td:nth-child(even) {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .row-1 {
@@ -185,12 +181,12 @@ td:nth-child(even) {
 
 .about-us-text {
   color: white;
-  font-size: 19px;
+  font-size: 20px;
   text-shadow: 4px 4px 6px #000;
 }
 
 .why-us h2 {
-  font-size: 20px;
+  font-size: 22px;
   color: white;
   text-shadow: 4px 4px 6px #000;
 }
@@ -198,10 +194,14 @@ td:nth-child(even) {
 .why-us ul li {
   margin-bottom: 1%;
 
-  font-size: 22px;
+  font-size: 24px;
   color: #0093dc;
   text-shadow: 4px 4px 6px #000;
   list-style-type: none;
+}
+
+.why-us ul li:before {
+  content: "✓ ";
 }
 
 .row-2 {

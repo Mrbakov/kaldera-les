@@ -23,7 +23,7 @@
                   name: 'products',
                   params: {
                     id: species.id,
-                    species: species.name,
+                    species: species,
                     products: species.products
                   }
                 }"
@@ -71,144 +71,132 @@ export default {
       treeSpecies: [
         {
           id: 1,
-          name: "ash",
+          name: "whitePine",
+          orderName: "Бял бор",
           products: [
             {
               id: 1,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "diameter"
+              name: "plank",
+              photo: require("@/assets/pictures/products/plank.jpg"),
+              // properties: [{ name: "Width", value: "7 cm" }],
+              orderName: "Талпа"
             },
             {
               id: 2,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "lw"
+              name: "paneling",
+              photo: require("@/assets/pictures/products/paneling.jpg"),
+              orderName: "Ламперия"
             },
             {
               id: 3,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "volume"
+              name: "formworkPaneling",
+              photo: require("@/assets/pictures/products/formwork_paneling.jpg"),
+              orderName: "Куфражна амперия"
             },
             {
               id: 4,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "volume"
+              name: "dogHouse",
+              photo: require("@/assets/pictures/products/dog_house.jpg"),
+              orderName: "Къща за куче"
             },
             {
               id: 5,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "volume"
-            },
-            {
-              id: 6,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "volume"
-            },
-            {
-              id: 7,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "volume"
-            },
-            {
-              id: 8,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "volume"
-            },
-            {
-              id: 9,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "volume"
-            },
-            {
-              id: 10,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "volume"
+              name: "customOrder",
+              photo: require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
+              orderName: "Продукт по поръчка"
             }
           ]
         },
         {
           id: 2,
-          name: "Acacia",
+          name: "acacia",
+          orderName: "Акация",
           products: [
             {
               id: 1,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532"
+              name: "vineyardStake",
+              photo: require("@/assets/pictures/products/vineyard_stake.jpg"),
+              orderName: "Кол за лозов масив"
+            },
+            {
+              id: 2,
+              name: "customOrder",
+              photo: require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
+              orderName: "Продукт по поръчка"
+            }
+          ]
+        },
+        {
+          id: 3,
+          name: "spruce",
+          orderName: "Смърч",
+          products: [
+            {
+              id: 1,
+              name: "plank",
+              photo: require("@/assets/pictures/products/plank.jpg"),
+              orderName: "Талпа"
+            },
+            {
+              id: 2,
+              name: "paneling",
+              photo: require("@/assets/pictures/products/paneling.jpg"),
+              orderName: "Ламперия"
+            },
+            {
+              id: 3,
+              name: "formworkPaneling",
+              photo: require("@/assets/pictures/products/formwork_paneling.jpg"),
+              orderName: "Куфражна амперия"
+            },
+            {
+              id: 4,
+              name: "dogHouse",
+              photo: require("@/assets/pictures/products/dog_house.jpg"),
+              orderName: "Къща за куче"
+            },
+            {
+              id: 5,
+              name: "customOrder",
+              photo: require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
+              orderName: "Продукт по поръчка"
+            }
+          ]
+        },
+        {
+          id: 4,
+          name: "fir",
+          orderName: "Ела",
+          products: [
+            {
+              id: 1,
+              name: "plank",
+              photo: require("@/assets/pictures/products/plank.jpg"),
+              orderName: "Талпа"
+            },
+            {
+              id: 2,
+              name: "paneling",
+              photo: require("@/assets/pictures/products/paneling.jpg"),
+              orderName: "Ламперия"
+            },
+            {
+              id: 3,
+              name: "formworkPaneling",
+              photo: require("@/assets/pictures/products/formwork_paneling.jpg"),
+              orderName: "Куфражна амперия"
+            },
+            {
+              id: 4,
+              name: "dogHouse",
+              photo: require("@/assets/pictures/products/dog_house.jpg"),
+              orderName: "Къща за куче"
+            },
+            {
+              id: 5,
+              name: "customOrder",
+              photo: require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
+              orderName: "Продукт по поръчка"
             }
           ]
         }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ $t(species) }}</h1>
+    <h1>{{ $t(species.name) }}</h1>
     <ul class="products-list">
       <li v-for="product in products" :key="product.id">
         <ProductCard>
@@ -16,39 +16,18 @@
           </template>
           <template slot="content">
             <table>
-              <tr>
-                <td>Property</td>
-                <td>{{ product.property3 }}</td>
-              </tr>
-
-              <tr>
-                <td>Test Property</td>
-                <td>{{ product.property4 }}</td>
-              </tr>
-              <tr>
-                <td>Another One</td>
-                <td>{{ product.property5 }}</td>
-              </tr>
-              <tr>
-                <td>Operating</td>
-                <td>{{ product.property6 }}</td>
-              </tr>
-              <tr>
-                <td>Pro Perty</td>
-                <td>{{ product.property7 }}</td>
-              </tr>
-              <tr>
-                <td>Testing</td>
-                <td>{{ product.property8 }}</td>
+              <tr v-for="(property, index) in product.properties" :key="index">
+                <td class="property-name">{{ property.name }}</td>
+                <td>{{ property.value }}</td>
               </tr>
             </table>
           </template>
           <template slot="footer">
             <span class="card-footer">
               <OrderDialogButton
-                label="Order"
+                :label="$t('order')"
                 class="p-button-raised"
-                @click="openDialog(product)"
+                @click="openDialog(product.orderName, species.orderName)"
               />
             </span>
           </template>
@@ -56,7 +35,7 @@
       </li>
     </ul>
     <OrderDialog
-      header="Order"
+      :header="$t('order')"
       :visible.sync="display"
       v-click-outside="closeDialog"
       contentStyle="height: 550px"
@@ -71,7 +50,7 @@
           name="name"
           type="text"
           v-model="name"
-          placeholder="Name"
+          :placeholder="$t('namePlaceholder')"
         />
         <Email
           id="email"
@@ -79,33 +58,33 @@
           type="email"
           value=""
           v-model="email"
-          placeholder="Email"
+          :placeholder="$t('emailLabel')"
         />
         <Phone
           id="phone"
           name="phone"
           type="text"
           v-model="phone"
-          placeholder="Phone"
+          :placeholder="$t('phoneLabel')"
         />
-        <Class v-model="grade" placeholder="Grade" />
-        <Volume
-          id="volume"
-          v-model="volume"
-          name="volume"
-          placeholder="Volume"
+        <Class v-model="grade" :placeholder="$t('grade')" />
+        <Quantity
+          id="quantity"
+          v-model="quantity"
+          name="quantity"
+          :placeholder="$t('quantity')"
         />
         <div class="p-inputgroup">
-          <span class="p-inputgroup-addon">cm</span>
-          <LW placeholder="Diameter" v-model="diameter" />
+          <span class="p-inputgroup-addon">{{ $t("cm") }}</span>
+          <Diameter :placeholder="$t('diameter')" v-model="diameter" />
         </div>
         <div class="p-inputgroup">
-          <span class="p-inputgroup-addon">m</span>
-          <Diameter id="length" placeholder="Length" v-model="length" />
+          <span class="p-inputgroup-addon">{{ $t("m") }}</span>
+          <LW id="length" :placeholder="$t('length')" v-model="length" />
         </div>
         <div class="p-inputgroup">
-          <span class="p-inputgroup-addon">m</span>
-          <Diameter id="width" placeholder="Width" v-model="width" />
+          <span class="p-inputgroup-addon">{{ $t("m") }}</span>
+          <LW id="width" :placeholder="$t('width')" v-model="width" />
         </div>
         <Message
           class="p-float-label"
@@ -114,9 +93,12 @@
           id="message"
           name="message"
           v-model="message"
-          placeholder="Additional requests"
+          :placeholder="$t('аdditionalRequests')"
         />
-        <OrderButton @click="sendOrder($event)" label="Submit" />
+        <OrderButton
+          @click="sendOrder($event, product, speciesName)"
+          :label="$t('submitLabel')"
+        />
       </form>
     </OrderDialog>
   </div>
@@ -142,6 +124,7 @@ import Class from "primevue/inputtext";
 import Volume from "primevue/spinner";
 import LW from "primevue/inputtext";
 import Diameter from "primevue/inputtext";
+import Quantity from "primevue/spinner";
 import axios from "axios";
 
 export default {
@@ -159,7 +142,8 @@ export default {
     Class,
     Volume,
     LW,
-    Diameter
+    Diameter,
+    Quantity
   },
   data() {
     return {
@@ -169,14 +153,18 @@ export default {
       phone: "",
       message: "",
       grade: "",
-      volume: "",
+      quantity: "",
       diameter: "",
       length: "",
-      width: ""
+      width: "",
+      product: "",
+      speciesName: ""
     };
   },
   methods: {
-    openDialog(product) {
+    openDialog(product, speciesName) {
+      this.product = product;
+      this.speciesName = speciesName;
       this.display = true;
     },
     closeDialog(event, el) {
@@ -187,12 +175,12 @@ export default {
       this.phone = "";
       this.message = "";
       this.grade = "";
-      this.volume = "";
+      this.quantity = "";
       this.diameter = "";
       this.length = "";
       this.width = "";
     },
-    sendOrder(event) {
+    sendOrder(event, product, speciesName) {
       event.preventDefault();
 
       var formData = new FormData();
@@ -201,10 +189,12 @@ export default {
       formData.append("phone", this.phone);
       formData.append("message", this.message);
       formData.append("grade", this.grade);
-      formData.append("volume", this.volume);
-      formData.append("diameter", this.message);
+      formData.append("quantity", this.quantity);
+      formData.append("diameter", this.diameter);
       formData.append("length", this.length);
       formData.append("width", this.width);
+      formData.append("product", this.product);
+      formData.append("species", this.speciesName);
 
       axios
         .post(
@@ -219,10 +209,12 @@ export default {
             this.phone = "";
             this.message = "";
             this.grade = "";
-            this.volume = "";
+            this.quantity = "";
             this.diameter = "";
             this.length = "";
             this.width = "";
+            this.product = "";
+            this.species = "";
             this.$toast.add({
               severity: "success",
               summary: "Success",
@@ -271,6 +263,11 @@ li {
 
 .p-card {
   width: 360px !important;
+  height: 390px !important;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -286,6 +283,7 @@ img {
 .card-footer {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 }
 
 .card-title {
@@ -301,6 +299,7 @@ table {
 }
 
 td {
+  font-size: 17px;
   padding-top: 4px;
   padding-bottom: 4px;
 }

@@ -10,11 +10,16 @@ export const TRANSLATIONS = {
     aboutUsText:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae error animi eligendi velit vitae deserunt. Qui recusandae soluta, quos sint molestiae perspiciatis itaque et ducimus adipisci vel perferendis voluptatem repellendus. Lorem ipsum dolor sit ametconsectetur adipisicing elit. Nam eius, libero.",
     whyUs: "Why choose us?",
-    reason1: "Because of reason #1",
-    reason2: "Because of reason #2",
-    reason3: "Because of reason #3",
-    reason4: "Because of reason #4",
+    reason1: "High quality",
+    reason2: "Precise execution",
+    reason3: "Secure delivery",
     workSite: "Our work site",
+    founded: "Founded",
+    founderHeading: "Founder",
+    founder: "Todor Todorov",
+    employees: "Number of employees",
+    operatingIn: "Operating in",
+    countries: "Bulgaria, Germany, France",
 
     // Contacts
     // Info
@@ -42,22 +47,97 @@ export const TRANSLATIONS = {
     errorDetail: "Test",
 
     // Products:
-    stake: "Stake",
+    customOrder: "Custom Order",
     whitePine: "White pine",
     plank: "Plank",
     paneling: "Paneling",
     formworkPaneling: "Formwork paneling",
-    largeDogHouse: "Large dog house",
-    smallDogHouse: "Small dog house",
+    dogHouse: "Dog house",
     acacia: "Acacia",
-    vineyardStake: "Stake for a vineyard"
+    vineyardStake: "Vineyard stake",
+    spruce: "Spruce",
+    fir: "Fir",
+    // Order dialog
+    namePlaceholder: "Your name",
+    order: "Order",
+    grade: "Grade",
+    quantity: "Quantity",
+    diameter: "Diameter",
+    length: "Length",
+    width: "Width",
+    аdditionalRequests: "Additional requests",
+    m: "m",
+    cm: "cm"
   },
   bg: {
+    // Header
     homepage: "Начална страница",
     treeSpecies: "Дървесни видове",
     contacts: "Контакти",
-    stake: "Кол",
-    ash: "Ясен"
+
+    // Homepage:
+    aboutUs: "За нас",
+    aboutUsText:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae error animi eligendi velit vitae deserunt. Qui recusandae soluta, quos sint molestiae perspiciatis itaque et ducimus adipisci vel perferendis voluptatem repellendus. Lorem ipsum dolor sit ametconsectetur adipisicing elit. Nam eius, libero.",
+    whyUs: "Защо да изберете нас?",
+    reason1: "Високо качество",
+    reason2: "Прецизно изпълнение",
+    reason3: "Сигурна доставка",
+    workSite: "Нашият работен обект",
+    founded: "Основана",
+    founderHeading: "Основател",
+    founder: "Тодор Тодоров",
+    employees: "Брой служители",
+    operatingIn: "Работим в",
+    countries: "България, Германия, Франция",
+
+    // Contacts
+    // Info
+    contactUs: "Свържете се с нас",
+    addressHeading: "Адрес",
+    address: 'Велинград, "Христо Смирненски" 5',
+    workingTimeHeading: "Работно време",
+    workingTime: "09:00 до 17:00",
+    emailHeading: "Имейл",
+    email: "kalderales@abv.bg",
+    phoneHeading: "Телефон",
+    phone: "+359 88 722 0252",
+    // ContactForm
+    writeUs: "Пишете ни",
+    nameLabel: "Име",
+    emailLabel: "Имейл",
+    phoneLabel: "Телефон",
+    messagePlaceholder: "Съобщение",
+    submitLabel: "Изпрати",
+    success: "Success",
+    successMessage: "Success Message",
+    successDetail: "Test",
+    error: "error",
+    errorMessage: "error Message",
+    errorDetail: "Test",
+
+    // Products:
+    customOrder: "Продукт по поръчка",
+    whitePine: "Бял бор",
+    plank: "Талпи",
+    paneling: "Ламперия",
+    formworkPaneling: "Куфражна Ламперия",
+    dogHouse: "Къща за куче",
+    acacia: "Акация",
+    vineyardStake: "Кол за лозови масиви",
+    spruce: "Смърч",
+    fir: "Ела",
+    // Order dialog
+    namePlaceholder: "Вашето име",
+    order: "Поръчай",
+    grade: "Клас",
+    quantity: "Количество",
+    diameter: "Диаметър",
+    length: "Дължина",
+    width: "Широчина",
+    аdditionalRequests: "Допълнителни заявки",
+    m: "м",
+    cm: "см"
   },
   de: {
     homepage: "Startseite",
