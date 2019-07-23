@@ -115,6 +115,7 @@ export const TRANSLATIONS = {
     error: "error",
     errorMessage: "error Message",
     errorDetail: "Test",
+    required: "This field is required",
 
     // Products:
     customOrder: "Продукт по поръчка",

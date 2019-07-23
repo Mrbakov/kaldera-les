@@ -41,6 +41,7 @@
       contentStyle="height: 550px"
     >
       <form
+        v-on:submit="sendOrder($event, product, speciesName)"
         id="gform"
         class="gform pure-form pure-form-stacked"
         data-email="mrbakov1@gmail.com"
@@ -59,6 +60,7 @@
           value=""
           v-model="email"
           :placeholder="$t('emailLabel')"
+          required
         />
         <Phone
           id="phone"
@@ -95,10 +97,7 @@
           v-model="message"
           :placeholder="$t('аdditionalRequests')"
         />
-        <OrderButton
-          @click="sendOrder($event, product, speciesName)"
-          :label="$t('submitLabel')"
-        />
+        <OrderButton :label="$t('submitLabel')" />
       </form>
     </OrderDialog>
   </div>
@@ -237,6 +236,20 @@ export default {
     }
   }
 };
+document.addEventListener("DOMContentLoaded", function() {
+  var elements = document.getElementsByTagName("INPUT");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].oninvalid = function(e) {
+      e.target.setCustomValidity("");
+      if (!e.target.validity.valid) {
+        e.target.setCustomValidity("*");
+      }
+    };
+    elements[i].oninput = function(e) {
+      e.target.setCustomValidity("");
+    };
+  }
+});
 </script>
 
 <style scoped>
