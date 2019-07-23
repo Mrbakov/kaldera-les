@@ -197,105 +197,10 @@ export default {
         },
         {
           id: 2,
-          name: "Maple",
+          name: "Acacia",
           products: [
             {
               id: 1,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532"
-            },
-            {
-              id: 2,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532"
-            },
-            {
-              id: 3,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532"
-            },
-            {
-              id: 4,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532"
-            }
-          ]
-        },
-        {
-          id: 3,
-          name: "Birch",
-          products: [
-            {
-              id: 1,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532",
-              boughtBy: "volume"
-            },
-            {
-              id: 2,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532"
-            },
-            {
-              id: 3,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532"
-            },
-            {
-              id: 4,
-              name: "stake",
-              photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
-              property3: "Property",
-              property4: 6521,
-              property5: 51,
-              property6: "Tree",
-              property7: "Testing",
-              property8: "Property 532"
-            },
-            {
-              id: 5,
               name: "stake",
               photo: require("@/assets/pictures/job_site_photos/stakes_1.jpg"),
               property3: "Property",

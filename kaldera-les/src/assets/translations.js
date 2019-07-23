@@ -37,7 +37,14 @@ export const TRANSLATIONS = {
 
     // Products:
     stake: "Stake",
-    ash: "Ash"
+    whitePine: "White pine",
+    plank: "Plank",
+    paneling: "Paneling",
+    formworkPaneling: "Formwork paneling",
+    largeDogHouse: "Large dog house",
+    smallDogHouse: "Small dog house",
+    acacia: "Acacia",
+    vineyardStake: "Stake for a vineyard"
   },
   bg: {
     homepage: "Начална страница",

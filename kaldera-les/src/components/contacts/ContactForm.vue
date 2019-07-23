@@ -93,8 +93,8 @@ export default {
             this.message = "";
             this.$toast.add({
               severity: "success",
-              summary: "Success Message",
-              detail: "Order submitted",
+              summary: "Success",
+              detail: "Message submitted",
               life: 4000
             });
           }.bind(this)
@@ -104,8 +104,8 @@ export default {
             console.log(error);
             this.$toast.add({
               severity: "error",
-              summary: "Error message",
-              detail: "Order failed",
+              summary: "Error",
+              detail: "Message was not submitted",
               life: 4000
             });
           }.bind(this)

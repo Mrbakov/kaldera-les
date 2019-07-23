@@ -19,9 +19,6 @@ export default {
   methods: {
     changeLocale(locale) {
       i18n.locale = locale;
-    },
-    changeActivePage(page) {
-      this.activePage = page;
     }
   }
 };

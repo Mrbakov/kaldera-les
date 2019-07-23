@@ -225,7 +225,7 @@ export default {
             this.width = "";
             this.$toast.add({
               severity: "success",
-              summary: "Success Message",
+              summary: "Success",
               detail: "Order submitted",
               life: 4000
             });
@@ -236,7 +236,7 @@ export default {
             console.log(error);
             this.$toast.add({
               severity: "error",
-              summary: "Error message",
+              summary: "Error",
               detail: "Order failed",
               life: 4000
             });
