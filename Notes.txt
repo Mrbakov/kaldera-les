@@ -1,0 +1,42 @@
+<WoodTypes
+          v-model="selectedWoodSpecies"
+          :options="woodSpecies"
+          optionLabel="name"
+          :placeholder="$t('productCategories')"
+        />
+
+#wood-dropdown {
+  padding-right: 20px;
+  outline: none !important;
+}
+
+#wood-dropdown .p-dropdown {
+  width: 8em;
+}
+
+#wood-dropdown .p-dropdown .p-dropdown-label {
+  font-size: 60px !important;
+}
+
+#wood-dropdown .p-dropdown:not(.p-disabled).p-focus {
+  box-shadow: none;
+  border-color: rgb(0, 0, 0, 0.5);
+}
+
+//////////////////////////////////////////////////////////////
+
+ <router-link :to="{ name: 'product-categories' }">
+          <span>{{ $t("productCategories") }}</span>
+        </router-link>
+
+////////////////////
+
+ v-on:click="setActive('species')"
+:class="{ active: isActive('species') }"
+
+/////////////////
+
+Make a request in a method and call it from the submit button
+
+method="POST"
+action="https://script.google.com/macros/s/AKfycbxIqq5XK0Nkixnhfsk183BipnHVR7ob4RBer1O2QzLR_BvS9qg/exec"
