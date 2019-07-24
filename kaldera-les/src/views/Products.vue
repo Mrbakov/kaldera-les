@@ -44,7 +44,7 @@
         v-on:submit="sendOrder($event, product, speciesName)"
         id="gform"
         class="gform pure-form pure-form-stacked"
-        data-email="mrbakov1@gmail.com"
+        data-email="kalderales@gmail.com"
       >
         <Name
           id="name"
@@ -202,7 +202,6 @@ export default {
         )
         .then(
           function(response) {
-            console.log(response);
             this.name = "";
             this.email = "";
             this.phone = "";
@@ -224,7 +223,6 @@ export default {
         )
         .catch(
           function(error) {
-            console.log(error);
             this.$toast.add({
               severity: "error",
               summary: "Error",

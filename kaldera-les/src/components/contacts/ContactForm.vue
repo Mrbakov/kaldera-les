@@ -87,7 +87,6 @@ export default {
         )
         .then(
           function(response) {
-            console.log(response);
             this.name = "";
             this.email = "";
             this.phone = "";
@@ -102,7 +101,6 @@ export default {
         )
         .catch(
           function(error) {
-            console.log(error);
             this.$toast.add({
               severity: "error",
               summary: "Error",
