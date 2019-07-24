@@ -16,10 +16,10 @@ export const TRANSLATIONS = {
     workSite: "Our work site",
     founded: "Founded",
     founderHeading: "Founder",
-    founder: "Todor Todorov",
+    founder: "Bozhidar Asenov",
     employees: "Number of employees",
     operatingIn: "Operating in",
-    countries: "Bulgaria, Germany, France",
+    countries: "Whole Europe",
 
     // Contacts
     // Info
@@ -80,10 +80,10 @@ export const TRANSLATIONS = {
     workSite: "Нашият работен обект",
     founded: "Основана",
     founderHeading: "Основател",
-    founder: "Тодор Тодоров",
+    founder: "Божидар Асенов",
     employees: "Брой служители",
     operatingIn: "Работим в",
-    countries: "България, Германия, Франция",
+    countries: "Цяла Европа ",
 
     // Contacts
     // Info
@@ -144,10 +144,10 @@ export const TRANSLATIONS = {
     workSite: "Unsere Arbeitsstelle",
     founded: "Gegründet",
     founderHeading: "Gründer",
-    founder: "Тодор Тодоров",
+    founder: "Bozhidar Asenov",
     employees: "Anzahl der Angestellten",
     operatingIn: "Wir arbeiten ins",
-    countries: "Bulgarien, Deutschland, Frankreich",
+    countries: "Ganz Europa",
 
     // Contacts
     // Info

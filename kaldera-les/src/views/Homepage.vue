@@ -16,7 +16,7 @@
             <table>
               <tr>
                 <td>{{ $t("founded") }}</td>
-                <td>1984</td>
+                <td>2010</td>
               </tr>
 
               <tr>
@@ -25,7 +25,7 @@
               </tr>
               <tr>
                 <td>{{ $t("employees") }}</td>
-                <td>10 000</td>
+                <td>43</td>
               </tr>
               <tr>
                 <td>{{ $t("operatingIn") }}</td>
@@ -94,6 +94,7 @@ export default {
 .logo {
   width: 250px;
   box-shadow: 8px 5px 15px -5px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
 }
 
 table {
@@ -214,7 +215,7 @@ td:nth-child(even) {
   width: 80%;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: space-between;
   align-content: space-between;
   flex-wrap: wrap;

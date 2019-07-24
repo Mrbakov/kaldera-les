@@ -34,6 +34,29 @@
           </ul>
         </div>
       </li>
+      <!-- <li>
+        <a>
+          <span>{{ $t("treeSpecies") }}</span>
+        </a>
+        <div class="tree-species-dropdown">
+          <ul id="tree-species-list">
+            <li v-for="(service, index) in services" :key="index">
+              <router-link
+                :to="{
+                  name: 'services',
+                  params: {
+                    id: service.id,
+                    name: service.name,
+                    pictures: service.pictures
+                  }
+                }"
+              >
+                <span>{{ $t(service.name) }}</span>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </li> -->
     </ul>
     <LanguageDropdown
       v-model="selectedLanguage"
@@ -65,8 +88,8 @@ export default {
       languages: [
         { flag: "gb", language: "en", title: " English" },
         { flag: "bg", language: "bg", title: " Български" },
-        { flag: "de", language: "de", title: " Deutsch" },
-        { flag: "fr", language: "fr", title: " Français" }
+        { flag: "de", language: "de", title: " Deutsch" }
+        // { flag: "fr", language: "fr", title: " Français" }
       ],
       treeSpecies: [
         {
@@ -198,6 +221,64 @@ export default {
               photo: require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
               orderName: "Продукт по поръчка"
             }
+          ]
+        }
+      ],
+      services: [
+        {
+          id: 1,
+          name: "logging",
+          pictures: [
+            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
+            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
+            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
+            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
+            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
+            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
+            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
+            require("@/assets/pictures/job_site_photos/storage_1.jpg")
+          ]
+        },
+        {
+          id: 2,
+          name: "logging",
+          pictures: [
+            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
+            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
+            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
+            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
+            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
+            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
+            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
+            require("@/assets/pictures/job_site_photos/storage_1.jpg")
+          ]
+        },
+        {
+          id: 3,
+          name: "logging",
+          pictures: [
+            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
+            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
+            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
+            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
+            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
+            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
+            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
+            require("@/assets/pictures/job_site_photos/storage_1.jpg")
+          ]
+        },
+        {
+          id: 4,
+          name: "logging",
+          pictures: [
+            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
+            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
+            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
+            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
+            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
+            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
+            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
+            require("@/assets/pictures/job_site_photos/storage_1.jpg")
           ]
         }
       ]

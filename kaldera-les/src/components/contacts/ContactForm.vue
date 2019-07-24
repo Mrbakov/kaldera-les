@@ -4,7 +4,7 @@
       v-on:submit="sendEmail($event)"
       id="gform"
       class="gform pure-form pure-form-stacked"
-      data-email="mrbakov1@gmail.com"
+      data-email="kalderales@gmail.com"
     >
       <h1>{{ $t("writeUs") }}</h1>
       <span class="p-float-label">
