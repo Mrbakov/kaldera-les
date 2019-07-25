@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <ul>
-      <li style="margin-left:60px">
+      <li>
         <router-link :to="{ name: 'homepage' }">
           <span>{{ $t("homepage") }}</span>
         </router-link>
@@ -34,9 +34,9 @@
           </ul>
         </div>
       </li>
-      <!-- <li>
+      <li>
         <a>
-          <span>{{ $t("treeSpecies") }}</span>
+          <span>{{ $t("services") }}</span>
         </a>
         <div class="tree-species-dropdown">
           <ul id="tree-species-list">
@@ -46,7 +46,7 @@
                   name: 'services',
                   params: {
                     id: service.id,
-                    name: service.name,
+                    service: service.name,
                     pictures: service.pictures
                   }
                 }"
@@ -56,7 +56,7 @@
             </li>
           </ul>
         </div>
-      </li> -->
+      </li>
     </ul>
     <LanguageDropdown
       v-model="selectedLanguage"
@@ -241,7 +241,7 @@ export default {
         },
         {
           id: 2,
-          name: "logging",
+          name: "impregnation",
           pictures: [
             require("@/assets/pictures/job_site_photos/beams_1.jpg"),
             require("@/assets/pictures/job_site_photos/factory_1.jpg"),
@@ -255,7 +255,7 @@ export default {
         },
         {
           id: 3,
-          name: "logging",
+          name: "turning",
           pictures: [
             require("@/assets/pictures/job_site_photos/beams_1.jpg"),
             require("@/assets/pictures/job_site_photos/factory_1.jpg"),
@@ -269,7 +269,7 @@ export default {
         },
         {
           id: 4,
-          name: "logging",
+          name: "drying",
           pictures: [
             require("@/assets/pictures/job_site_photos/beams_1.jpg"),
             require("@/assets/pictures/job_site_photos/factory_1.jpg"),
@@ -302,6 +302,7 @@ export default {
 
 #header ul {
   margin: 0;
+  margin-left: 20px;
   padding: 0;
 
   display: flex;
@@ -422,6 +423,8 @@ export default {
 .tree-species-dropdown {
   display: none;
   position: absolute;
+  width: 20%;
+  height: 50%;
   background-color: rgb(0, 0, 0, 0.5);
 }
 
@@ -434,6 +437,16 @@ div.tree-species-dropdown:hover {
 }
 
 #tree-species-list {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
   list-style-type: none;
 }
 
