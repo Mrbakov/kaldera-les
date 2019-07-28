@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <ul>
-      <li style="margin-left:60px">
+      <li>
         <router-link :to="{ name: 'homepage' }">
           <span>{{ $t("homepage") }}</span>
         </router-link>
@@ -13,10 +13,33 @@
       </li>
       <li>
         <a>
+          <span>{{ $t("services") }}</span>
+        </a>
+        <div class="m-dropdown">
+          <ul id="m-list">
+            <li v-for="(service, index) in services" :key="index">
+              <router-link
+                :to="{
+                  name: 'services',
+                  params: {
+                    id: service.id,
+                    service: service.name,
+                    pictures: service.pictures
+                  }
+                }"
+              >
+                <span>{{ $t(service.name) }}</span>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a>
           <span>{{ $t("treeSpecies") }}</span>
         </a>
-        <div class="tree-species-dropdown">
-          <ul id="tree-species-list">
+        <div class="m-dropdown">
+          <ul id="m-list">
             <li v-for="(species, index) in treeSpecies" :key="index">
               <router-link
                 :to="{
@@ -34,29 +57,6 @@
           </ul>
         </div>
       </li>
-      <!-- <li>
-        <a>
-          <span>{{ $t("treeSpecies") }}</span>
-        </a>
-        <div class="tree-species-dropdown">
-          <ul id="tree-species-list">
-            <li v-for="(service, index) in services" :key="index">
-              <router-link
-                :to="{
-                  name: 'services',
-                  params: {
-                    id: service.id,
-                    name: service.name,
-                    pictures: service.pictures
-                  }
-                }"
-              >
-                <span>{{ $t(service.name) }}</span>
-              </router-link>
-            </li>
-          </ul>
-        </div>
-      </li> -->
     </ul>
     <LanguageDropdown
       v-model="selectedLanguage"
@@ -229,57 +229,41 @@ export default {
           id: 1,
           name: "logging",
           pictures: [
-            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
-            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
-            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
-            require("@/assets/pictures/job_site_photos/storage_1.jpg")
+            require("@/assets/pictures/logging/IMG-0cd9de35175628e854817dbe0316ab80-V.jpg"),
+            require("@/assets/pictures/logging/IMG-002e806234c3a8f6313e368f4a48810b-V.jpg"),
+            require("@/assets/pictures/logging/IMG-7f7c875a10dbb96e67b8787e47cc2b15-V.jpg"),
+            require("@/assets/pictures/logging/IMG-07f76ee32e9ce2048f5fa0d3b78973ad-V.jpg"),
+            require("@/assets/pictures/logging/IMG-10b2fa14267d4438b1c54586936606e9-V.jpg"),
+            require("@/assets/pictures/logging/IMG-14e663f696dadd3bd9e988b361f831c2-V.jpg"),
+            require("@/assets/pictures/logging/IMG-6373c4827858810356153818e29573f6-V.jpg"),
+            require("@/assets/pictures/logging/IMG-ac70d202bb9d80dbdc1dc48e509265cb-V.jpg"),
+            require("@/assets/pictures/logging/IMG-b8219c6ca67cc65c5d2e447d7f5942c9-V.jpg"),
+            require("@/assets/pictures/logging/IMG-c3570cbd27640dcc4488dab7f5a04b13-V.jpg"),
+            require("@/assets/pictures/logging/IMG-d8275b121f83d25578b8d2dc3a1f53ee-V.jpg"),
+            require("@/assets/pictures/logging/IMG-e1e7da819270fbc43fc0a80b947928ca-V.jpg"),
+            require("@/assets/pictures/logging/IMG-e4bcdd7a9236594321ce9c23ff2e7a1c-V.jpg"),
+            require("@/assets/pictures/logging/IMG-eb78911512437c6d930e1ff6d6dd4617-V.jpg"),
+            require("@/assets/pictures/logging/IMG-fbfe4317f3fc825dfbfaf5291821822c-V.jpg")
           ]
         },
         {
           id: 2,
-          name: "logging",
+          name: "impregnation",
           pictures: [
-            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
-            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
-            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
-            require("@/assets/pictures/job_site_photos/storage_1.jpg")
+            require("@/assets/pictures/impregnation/IMG-6fb0f9ef6a36294807249705d7fff31b-V.jpg"),
+            require("@/assets/pictures/impregnation/IMG-8af001b8f0c9c76be28459e469669182-V.jpg"),
+            require("@/assets/pictures/impregnation/IMG-d93f83c79bb07f86499846f6e51b1944-V.jpg")
           ]
         },
         {
           id: 3,
-          name: "logging",
-          pictures: [
-            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
-            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
-            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
-            require("@/assets/pictures/job_site_photos/storage_1.jpg")
-          ]
+          name: "turning",
+          pictures: []
         },
         {
           id: 4,
-          name: "logging",
-          pictures: [
-            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
-            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
-            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
-            require("@/assets/pictures/job_site_photos/storage_1.jpg")
-          ]
+          name: "drying",
+          pictures: []
         }
       ]
     };
@@ -302,6 +286,7 @@ export default {
 
 #header ul {
   margin: 0;
+  margin-left: 20px;
   padding: 0;
 
   display: flex;
@@ -419,22 +404,38 @@ export default {
   border-color: rgb(0, 0, 0, 0.5);
 }
 
-.tree-species-dropdown {
+.m-dropdown {
   display: none;
   position: absolute;
+  width: 18%;
+  height: 33%;
   background-color: rgb(0, 0, 0, 0.5);
 }
 
-div.tree-species-dropdown:hover {
+div.m-dropdown:hover {
   display: block;
 }
 
-#header ul li a:hover + div.tree-species-dropdown {
+#header ul li a:hover + div.m-dropdown {
   display: block;
 }
 
-#tree-species-list {
+#m-list {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  display: flex;
+  flex-direction: column-reverse;
+
   list-style-type: none;
+}
+
+#m-list li {
+  align-self: flex-start;
+  padding: 0px !important;
 }
 
 button:focus {

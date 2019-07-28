@@ -4,6 +4,7 @@ export const TRANSLATIONS = {
     homepage: "Home",
     treeSpecies: "Tree Species",
     contacts: "Contacts",
+    services: "Services",
 
     // Homepage:
     aboutUs: "About us",
@@ -61,13 +62,20 @@ export const TRANSLATIONS = {
     width: "Width",
     аdditionalRequests: "Additional requests",
     m: "m",
-    cm: "cm"
+    cm: "cm",
+
+    // Services
+    logging: "Logging",
+    impregnation: "Impregnation",
+    turning: "Turning",
+    drying: "Drying"
   },
   bg: {
     // Header
     homepage: "Начална страница",
     treeSpecies: "Дървесни видове",
     contacts: "Контакти",
+    services: "Услуги",
 
     // Homepage:
     aboutUs: "За нас",
@@ -125,13 +133,20 @@ export const TRANSLATIONS = {
     width: "Широчина",
     аdditionalRequests: "Допълнителни заявки",
     m: "м",
-    cm: "см"
+    cm: "см",
+
+    // Services
+    logging: "Бичене",
+    impregnation: "Импрегниране",
+    turning: "Струговане",
+    drying: "Сушене"
   },
   de: {
     // Header
     homepage: "Startseite",
     treeSpecies: "Baumarten",
     contacts: "Kontakten",
+    services: "Bedienungen",
 
     // Homepage:
     aboutUs: "Über uns",
@@ -183,13 +198,18 @@ export const TRANSLATIONS = {
     namePlaceholder: "Dein Name",
     order: "Bestellen",
     grade: "Grad",
-    quantity: "Количество",
+    quantity: "Menge",
     diameter: "Durchmesser",
     length: "Länge",
     width: "Breite",
     аdditionalRequests: "Zusätzliche Anfragen",
     m: "m",
-    cm: "cm"
+    cm: "cm",
+    // Services
+    logging: "Schlagen",
+    impregnation: "Imprägnierung",
+    turning: "Drehen",
+    drying: "Trocknen"
   },
   fr: {
     homepage: "Page d'accueil",
