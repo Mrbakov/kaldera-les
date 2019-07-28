@@ -15,8 +15,8 @@
         <a>
           <span>{{ $t("treeSpecies") }}</span>
         </a>
-        <div class="tree-species-dropdown">
-          <ul id="tree-species-list">
+        <div class="m-dropdown">
+          <ul id="m-list">
             <li v-for="(species, index) in treeSpecies" :key="index">
               <router-link
                 :to="{
@@ -38,8 +38,8 @@
         <a>
           <span>{{ $t("services") }}</span>
         </a>
-        <div class="tree-species-dropdown">
-          <ul id="tree-species-list">
+        <div class="m-dropdown">
+          <ul id="m-list">
             <li v-for="(service, index) in services" :key="index">
               <router-link
                 :to="{
@@ -420,23 +420,23 @@ export default {
   border-color: rgb(0, 0, 0, 0.5);
 }
 
-.tree-species-dropdown {
+.m-dropdown {
   display: none;
   position: absolute;
-  width: 20%;
-  height: 50%;
+  width: 18%;
+  height: 33%;
   background-color: rgb(0, 0, 0, 0.5);
 }
 
-div.tree-species-dropdown:hover {
+div.m-dropdown:hover {
   display: block;
 }
 
-#header ul li a:hover + div.tree-species-dropdown {
+#header ul li a:hover + div.m-dropdown {
   display: block;
 }
 
-#tree-species-list {
+#m-list {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -444,10 +444,14 @@ div.tree-species-dropdown:hover {
   top: 0;
 
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: column-reverse;
 
   list-style-type: none;
+}
+
+#m-list li {
+  align-self: flex-start;
+  padding: 0px !important;
 }
 
 button:focus {
