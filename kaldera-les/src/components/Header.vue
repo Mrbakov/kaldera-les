@@ -13,29 +13,6 @@
       </li>
       <li>
         <a>
-          <span>{{ $t("treeSpecies") }}</span>
-        </a>
-        <div class="m-dropdown">
-          <ul id="m-list">
-            <li v-for="(species, index) in treeSpecies" :key="index">
-              <router-link
-                :to="{
-                  name: 'products',
-                  params: {
-                    id: species.id,
-                    species: species,
-                    products: species.products
-                  }
-                }"
-              >
-                <span>{{ $t(species.name) }}</span>
-              </router-link>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <a>
           <span>{{ $t("services") }}</span>
         </a>
         <div class="m-dropdown">
@@ -52,6 +29,29 @@
                 }"
               >
                 <span>{{ $t(service.name) }}</span>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a>
+          <span>{{ $t("treeSpecies") }}</span>
+        </a>
+        <div class="m-dropdown">
+          <ul id="m-list">
+            <li v-for="(species, index) in treeSpecies" :key="index">
+              <router-link
+                :to="{
+                  name: 'products',
+                  params: {
+                    id: species.id,
+                    species: species,
+                    products: species.products
+                  }
+                }"
+              >
+                <span>{{ $t(species.name) }}</span>
               </router-link>
             </li>
           </ul>
@@ -230,93 +230,40 @@ export default {
           name: "logging",
           pictures: [
             require("@/assets/pictures/logging/IMG-0cd9de35175628e854817dbe0316ab80-V.jpg"),
-            require("@/assets/pictures/logging/IMG-002e806234c3a8f6313e368f4a48810b-V.jpg")
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
-            // require("@/assets/pictures/logging/.jpg"),
+            require("@/assets/pictures/logging/IMG-002e806234c3a8f6313e368f4a48810b-V.jpg"),
+            require("@/assets/pictures/logging/IMG-7f7c875a10dbb96e67b8787e47cc2b15-V.jpg"),
+            require("@/assets/pictures/logging/IMG-07f76ee32e9ce2048f5fa0d3b78973ad-V.jpg"),
+            require("@/assets/pictures/logging/IMG-10b2fa14267d4438b1c54586936606e9-V.jpg"),
+            require("@/assets/pictures/logging/IMG-14e663f696dadd3bd9e988b361f831c2-V.jpg"),
+            require("@/assets/pictures/logging/IMG-6373c4827858810356153818e29573f6-V.jpg"),
+            require("@/assets/pictures/logging/IMG-ac70d202bb9d80dbdc1dc48e509265cb-V.jpg"),
+            require("@/assets/pictures/logging/IMG-b8219c6ca67cc65c5d2e447d7f5942c9-V.jpg"),
+            require("@/assets/pictures/logging/IMG-c3570cbd27640dcc4488dab7f5a04b13-V.jpg"),
+            require("@/assets/pictures/logging/IMG-d8275b121f83d25578b8d2dc3a1f53ee-V.jpg"),
+            require("@/assets/pictures/logging/IMG-e1e7da819270fbc43fc0a80b947928ca-V.jpg"),
+            require("@/assets/pictures/logging/IMG-e4bcdd7a9236594321ce9c23ff2e7a1c-V.jpg"),
+            require("@/assets/pictures/logging/IMG-eb78911512437c6d930e1ff6d6dd4617-V.jpg"),
+            require("@/assets/pictures/logging/IMG-fbfe4317f3fc825dfbfaf5291821822c-V.jpg")
           ]
         },
         {
           id: 2,
           name: "impregnation",
           pictures: [
-            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
-            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
-            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
-            require("@/assets/pictures/job_site_photos/storage_1.jpg")
+            require("@/assets/pictures/impregnation/IMG-6fb0f9ef6a36294807249705d7fff31b-V.jpg"),
+            require("@/assets/pictures/impregnation/IMG-8af001b8f0c9c76be28459e469669182-V.jpg"),
+            require("@/assets/pictures/impregnation/IMG-d93f83c79bb07f86499846f6e51b1944-V.jpg")
           ]
         },
         {
           id: 3,
           name: "turning",
-          pictures: [
-            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
-            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
-            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
-            require("@/assets/pictures/job_site_photos/storage_1.jpg")
-          ]
+          pictures: []
         },
         {
           id: 4,
           name: "drying",
-          pictures: [
-            require("@/assets/pictures/job_site_photos/beams_1.jpg"),
-            require("@/assets/pictures/job_site_photos/factory_1.jpg"),
-            require("@/assets/pictures/job_site_photos/job_site_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_1.jpg"),
-            require("@/assets/pictures/job_site_photos/logs_and_machine.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_1.jpg"),
-            require("@/assets/pictures/job_site_photos/machine_2.jpg"),
-            require("@/assets/pictures/job_site_photos/storage_1.jpg")
-          ]
+          pictures: []
         }
       ]
     };

@@ -35,18 +35,17 @@ h1 {
   text-shadow: 2px 2px 4px #000000;
 }
 
-images-container {
+.images-container {
   display: flex;
   justify-content: center;
 }
 
 div ul {
   width: 90%;
+  padding: 0;
 
   display: flex;
-  justify-content: flex-start;
-  align-items: space-between;
-  align-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 
   list-style-type: none;
@@ -57,8 +56,8 @@ ul li {
 }
 
 img {
-  width: 315px;
-  height: 236px;
+  width: 360px;
+  height: 269px;
 
   box-shadow: 8px 8px 15px -5px rgba(0, 0, 0, 0.8);
   transition: transform 0.4s;
