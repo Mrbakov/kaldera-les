@@ -407,8 +407,8 @@ export default {
 .m-dropdown {
   display: none;
   position: absolute;
-  width: 18%;
-  height: 33%;
+  width: 240px;
+  height: 210px;
   background-color: rgb(0, 0, 0, 0.5);
 }
 
